@@ -1,0 +1,97 @@
+<div class="look-book__container">
+  {% if section.blocks.size > 0 %}
+    {% for block in section.blocks %}
+      {% if block.type == "collection" %}
+        {% assign collection = collections[block.settings.select_collection] %}
+        {% if collection %}
+          <div class="look-book__header">
+            <h2 class="look-book__title">
+              {{ block.settings.collection_title | default: collection.title }}
+            </h2>
+            {% if collection.image %}
+              {{
+                collection.image
+                | image_url: width: 1006
+                | image_tag:
+                  class: "lb-collection__image",
+              }}
+            {% endif %}
+          </div>
+
+          <div class="look-book__products">
+            {% for product in collection.products | limit: 2 %}
+              <div class="look-book__product">
+                <a href="{{ product.url }}" class="look-book__product-link">
+                  {{
+                    product.featured_image
+                    | image_url: width:730
+                    | image_tag:
+                      class: "look-book__product-image",
+                      alt: product.title
+                  }}
+                  {% if product.images.size > 1 %}
+                    {{
+                      product.images[1]
+                      | image_url: width:450
+                      | image_tag:
+                        class: "look-book__product-image--hover",
+                        alt: product.title
+                    }}
+                    <img
+                      class="look-book__product-image--hover"
+                      src="{{ product.images[1] | img_url: 'medium' }}"
+                      alt="{{ product.title }}">
+                  {% endif %}
+                </a>
+                <div class="look-book__product-info">
+                  <h3 class="look-book__product-title">{{ product.title }}</h3>
+                  <p class="look-book__product-price">{{ product.price | money }}</p>
+                  <form method="post" action="/cart/add">
+                    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                    <button type="submit" class="look-book__add-to-cart">
+                      Add to Cart
+                    </button>
+                  </form>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    <p>No collections have been added yet.</p>
+  {% endif %}
+</div>
+
+{% schema %}
+  {
+  "name": "Look Book",
+  "class": "look-book",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Collection",
+      "type": "collection",
+      "settings": [
+        {
+          "type": "text",
+          "id": "collection_title",
+          "label": "Collection Title",
+          "info": "This text will be show in place of collection name."
+        },
+        {
+          "type": "collection",
+          "id": "select_collection",
+          "label": "Select Collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Look Book"
+    }
+  ]
+}
+{% endschema %}

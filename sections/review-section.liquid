@@ -1,0 +1,174 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.top_padding | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.bottom_padding | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.top_padding }}px;
+    padding-bottom: {{ section.settings.bottom_padding }}px;
+  }
+  } 
+{%- endstyle -%}
+<div class="review-section page-width">
+  <div class="container">
+    {% if section.settings.heading %}
+      <h2 class="section-review__heading heading-underline">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    <div class="swiper section-review__slider review-{{ section.id }}">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide section-review__slide">
+            <div class="section-review__content">
+              <div class="section-review__image">
+                {% if block.settings.review_image %}
+                  {% liquid
+                    assign sizes = '100vw'
+                    assign widths = '375, 514'
+                  %}
+                  {{
+                    block.settings.review_image
+                    | image_url: width: 399
+                    | image_tag: class: 'review-image', sizes: sizes, widths: widths
+                   }}
+                {% endif %}
+              </div>
+              <div class="section-review__details">
+                <div class="section-review__rating">
+                  {% for i in (1..block.settings.rating) %}
+                    <span class="star">{{ 'Star 1.svg' | inline_asset_content }}</span>
+                  {% endfor %}
+                </div>
+                {% if block.settings.review_title %}
+                  <h3 class="section-review__title">{{ block.settings.review_title }}</h3>
+                {% endif %}
+                {% if block.settings.review %}
+                  <p class="section-review__text">{{ block.settings.review }}</p>
+                {% endif %}
+                <div class="section-review__meta">
+                  {% if block.settings.name %}
+                    <div class="section-review__name">{{ block.settings.name }}</div>
+                  {% endif %}
+                  {% if block.settings.place %}
+                    <div class="section-review__place">{{ block.settings.place }}</div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- Pagination Dots -->
+    <div class="review-pagination"></div>
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const swiper{{ section.id | remove: "-"}} = new Swiper('.review-{{ section.id }}', {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      pagination: {
+        el: '.review-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 1
+        },
+        1024: {
+          slidesPerView: 2
+        }
+      }
+    });
+  });
+
+</script>
+{% schema %}
+{
+  "name": "Review Section",
+  "tag": "section",
+  "class": "section-review",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Heading",
+      "id": "heading",
+      "default": "Let customers speak for us",
+      "placeholder": "Add a heading"
+    },
+    {
+      "type": "range",
+      "label": "Top Padding",
+      "id": "top_padding",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "label": "Bottom Padding",
+      "id": "bottom_padding",
+      "default": 32,
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review_slides",
+      "name": "Review Slides",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Review Image",
+          "id": "review_image"
+        },
+        {
+          "type": "text",
+          "label": "Review Title",
+          "id": "review_title",
+          "placeholder": "Enter Review Title"
+        },
+        {
+          "type": "inline_richtext",
+          "label": "Review",
+          "id": "review",
+          "info": "Add Customer's Review"
+        },
+        {
+          "type": "range",
+          "label": "Rating",
+          "id": "rating",
+          "default": 4,
+          "min": 1,
+          "max": 5,
+          "step": 1
+        },
+        {
+          "type": "text",
+          "label": "Name",
+          "id": "name",
+          "placeholder": "Enter reviewer name"
+        },
+        {
+          "type": "text",
+          "label": "Place",
+          "id": "place",
+          "placeholder": "Enter Place"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Review Section"
+    }
+  ]
+}
+{% endschema %}

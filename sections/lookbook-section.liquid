@@ -1,0 +1,207 @@
+<style>
+
+  .look-book__title-index, .look-book__title, .look-book__product-title {
+    font-family: 'Crimson Text';
+    font-weight: 400;
+  }
+  .look-book__title-index {
+    font-size: 6.2rem;
+    line-height: 0.9;
+    color: #C3C0AD;
+  }
+  .look-book__title {
+    font-size: 10rem;
+    line-height: 1;
+    color: #622B1E;
+    margin: 0;
+  }
+  .look-book__product-title {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    color: #31302B;
+    text-align: center;
+  }
+  .look-book__product-info__info {
+    text-align: center;
+    padding-inline: 1.5rem;
+  }
+  .look-book__product-price, .look-book__add-to-cart {
+    font-family: 'Hanken Grotesk';
+  }
+  .look-book__product-price {
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .look-book__product-info__info .product-form__buttons .product-form__submit {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 0.9;
+    color: #622B1E;
+  }
+  .look-book__product-info__info .product-form__buttons .product-form__submit.button {
+    background: none;
+  }
+  .look-book__product-info__info .product-form__buttons .product-form__submit.button::before,
+  .look-book__product-info__info .product-form__buttons .product-form__submit.button::after {
+    content: none;
+  }
+  .look-book__add-to-cart {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 0.9;
+    color: #622B1E;
+  }
+  .look-book__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .lb-image-collection__container .lb-collection__image {
+    width: 100%;
+    object-fit: contain;
+  }
+  .look-book__products .look-book__product {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .look-book__product .look-book__product-link {
+    display: flex;
+    text-decoration: none;
+  }
+  .look-book__product-link .look-book__product-image {
+    width: 100%;
+    object-fit: cover;
+  }
+  .look-book__product-info__image .look-book__product-image--hover {
+    width: 100%;
+    object-fit: cover;
+  }
+  .look-book__product-info__info .look-book__product-title {
+    margin-top: 0;
+  }
+  .look-book__product-info {
+    display: flex;
+  }
+  .row-reverse {
+    flex-direction: row-reverse;
+  }
+  @media screen and (min-width: 750px) {
+    .look-book__products .look-book__product {
+      gap: 10rem;
+      padding-bottom: 2.4rem;
+    }
+    .lb-collection__container {
+      padding-bottom: 7.6rem
+    }
+  }
+</style>
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+<div class="look-book__container page-width">
+  {% if section.blocks.size > 0 %}
+    {% for block in section.blocks %}
+      {% if block.type == "collection" %}
+        {% assign collection = collections[block.settings.select_collection] %}
+        {% if collection %}
+          <div class="lb-collection__container">
+            <div class="look-book__header">
+              <div class="lb-title__container">
+                <div class="look-book__title-index">
+                  {% if forloop.index < 10 %}
+                  0{{ forloop.index }}
+                  {% else %}
+                    {{ forloop.index }}
+                  {% endif %}
+                </div>
+                <h2 class="look-book__title">
+                  {{ block.settings.collection_title | default: collection.title }}
+                </h2>
+              </div>
+              {% if collection.featured_image %}
+                <div class="lb-image-collection__container">
+                {{
+                  collection.featured_image
+                  | image_url: width: 1006
+                  | image_tag: class: 'lb-collection__image'
+                }}
+              </div>
+              {% endif %}
+            </div>
+
+            <div class="look-book__products">
+              {% for product in collection.products limit: 2 %}
+                <div class="look-book__product{% if forloop.index == 2 %} row-reverse{% endif %}">
+                  <a href="{{ product.url }}" class="look-book__product-link">
+                    {{
+                      product.featured_image
+                      | image_url: width:730
+                      | image_tag:
+                        class: "look-book__product-image",
+                        alt: product.title
+                    }}
+                  </a>
+                  <div class="look-book__product-info{% if forloop.index == 2 %} row-reverse{% endif %}">
+                    <div class="look-book__product-info__image">
+                      {% if product.images.size > 1 %}
+                        {{
+                          product.images[1]
+                          | image_url: width:450
+                          | image_tag:
+                            class: "look-book__product-image--hover",
+                            alt: product.title
+                        }}
+                      {% endif %}
+                    </div>
+                    <div class="look-book__product-info__info">
+                      <h3 class="look-book__product-title">{{ product.title }}</h3>
+                      <p class="look-book__product-price">{{ product.price | money }}</p>
+                      {%
+                        assign product_form_id = 'product-form-' | append: product.id
+                      %}
+                      {%- render 'buy-buttons', product: product, product_form_id: product_form_id, section_id: section.id -%}
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    <p>No collections have been added yet.</p>
+  {% endif %}
+</div>
+
+{% schema %}
+  {
+  "name": "Look Book",
+  "class": "look-book",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Collection",
+      "type": "collection",
+      "settings": [
+        {
+          "type": "text",
+          "id": "collection_title",
+          "label": "Collection Title",
+          "info": "This text will be show in place of collection name."
+        },
+        {
+          "type": "collection",
+          "id": "select_collection",
+          "label": "Select Collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Look Book"
+    }
+  ]
+}
+{% endschema %}

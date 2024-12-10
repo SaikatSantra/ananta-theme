@@ -1,0 +1,71 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "brand_information_rNL8mr": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
+        },
+        "link_list_KMnzeE": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "quick-link"
+          }
+        },
+        "link_list_tzp7GE": {
+          "type": "link_list",
+          "settings": {
+            "heading": "My Account",
+            "menu": "my-account"
+          }
+        },
+        "link_list_8XMHVF": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Policies",
+            "menu": "footer"
+          }
+        },
+        "text_NNcNME": {
+          "type": "text",
+          "settings": {
+            "heading": "Store Details",
+            "subtext": "<p>Aoho,<\/p><p>P.R.S Lane Kolkata 15<\/p>",
+            "button_text": "View Location",
+            "store_location": "shopify:\/\/collections\/frontpage"
+          }
+        }
+      },
+      "block_order": [
+        "brand_information_rNL8mr",
+        "link_list_KMnzeE",
+        "link_list_tzp7GE",
+        "link_list_8XMHVF",
+        "text_NNcNME"
+      ],
+      "settings": {
+        "color_scheme": "scheme-8e377fb3-aefb-44f8-b11d-28e17a02f942",
+        "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "payment_enable": true,
+        "show_policy": true,
+        "margin_top": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

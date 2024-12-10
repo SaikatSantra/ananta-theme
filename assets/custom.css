@@ -1,0 +1,691 @@
+/*=============================== Font faces ========================= */
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('https://cdn.shopify.com/s/files/1/0701/7902/9028/files/CrimsonPro-Regular.woff2') format('woff2'),
+      url('https://cdn.shopify.com/s/files/1/0701/7902/9028/files/CrimsonPro-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url('https://cdn.shopify.com/s/files/1/0701/7902/9028/files/HankenGrotesk-Regular.woff2') format('woff2'),
+      url('https://cdn.shopify.com/s/files/1/0701/7902/9028/files/HankenGrotesk-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url('https://cdn.shopify.com/s/files/1/0701/7902/9028/files/HankenGrotesk-SemiBold.woff2') format('woff2'),
+      url('https://cdn.shopify.com/s/files/1/0701/7902/9028/files/HankenGrotesk-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url('https://cdn.shopify.com/s/files/1/0701/7902/9028/files/HankenGrotesk-Bold.woff2') format('woff2'),
+      url('https://cdn.shopify.com/s/files/1/0701/7902/9028/files/HankenGrotesk-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url('https://cdn.shopify.com/s/files/1/0701/7902/9028/files/HankenGrotesk-ExtraBold.woff2') format('woff2'),
+      url('https://cdn.shopify.com/s/files/1/0701/7902/9028/files/HankenGrotesk-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Crimson Text';
+  src: url('https://cdn.shopify.com/s/files/1/0701/7902/9028/files/CrimsonText-Regular.woff2') format('woff2'),
+      url('https://cdn.shopify.com/s/files/1/0701/7902/9028/files/CrimsonText-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/* ==== common =====*/
+.heading-underline::after {
+  content: url('https://cdn.shopify.com/s/files/1/0701/7902/9028/files/sbc-underline.svg');
+  display: block;
+}
+/* ======================== Announcement bar ================================*/
+
+.announcement-bar .announcement-bar__message.message-text {
+  display: flex;
+  align-items: center;
+  font-family: 'Hanken Grotesk';
+}
+.announce-link {
+  font-size: inherit;
+}
+@media screen and (min-width: 750px) {
+  .announcement-bar .announcement-bar__message.message-text {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+/* ==============================  end - Announcement bar ======================= */
+
+
+/* ==============================  Header ======================= */
+
+.header.header--middle-left.menu-centered {
+  grid-template-columns: 1fr auto 1fr;
+}
+.header__icon {
+  height: 4.8rem;
+  width: 4.8rem;
+}
+.header__icon .svg-wrapper {
+  width: 48px;
+  height: 48px;
+}
+.header__icons {
+  gap: 20px;
+}
+.header__active-menu-item {
+  text-underline-offset: 5rem;
+  text-decoration-thickness: 4px;
+}
+.header__menu-item:hover span {
+  text-underline-offset: 5rem;
+}
+.header__menu-item.link {
+  font-family: 'Hanken Grotesk';
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 21.6px;
+}
+.header__active-menu-item {
+  color: #622B1E;
+}
+
+/* ==============================  End - Header ======================= */
+
+/* ==============================  Slideshow banner ======================= */
+.slideshow__text-wrapper .slideshow__text .banner__heading {
+  font-family: 'Crimson Text';
+  font-weight: 400;
+  font-size: 10rem;
+  line-height: 10rem;
+}
+.slideshow__text-wrapper .slideshow__text.banner__box {
+  max-width: 66.5rem;
+}
+.slideshow__text-wrapper .slideshow__text .banner__text {
+  font-family: 'Hanken Grotesk';
+  font-weight: normal;
+  font-size: 3.6rem;
+  line-height: 3.24rem;
+  color: #FFFFFF;
+  margin-top: 2rem;
+}
+.slideshow__controls.slideshow__absolute {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  border: none;
+}
+.slider-counter--dots .slider-counter__link--dots.slider-counter__link--active .dot {
+  background-color: #9D4935;
+}
+.slider-counter--dots .slider-counter__link--dots .dot {
+  background-color: #C0BDAC80;
+  border: none;
+}
+.button-b-text {
+  font-family: 'Hanken Grotesk';
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.8rem;
+  padding: 0 65px;
+  min-height: 68px;
+}
+.button-b-text svg path {
+  fill: rgb(var(--color-button-text));
+}
+.banner__box>*+.banner__buttons {
+  margin-top: 5.2rem !important;
+}
+
+/* ==============================  End - Slideshow banner ======================= */
+
+/* ===================== Shop by category ======================*/
+.category-slider {
+  position: relative;
+  padding-bottom: 110px;
+  padding-inline: 84px;
+}
+.swiper-sbc {
+  max-width: 1522px;
+}
+.sbc-image-text .sbc-image {
+  width: 100%;
+  object-fit: contain;
+}
+.category-slider__heading {
+  font-family: 'Crimson Text';
+  text-align: center;
+  color: #31302B;
+}
+.swiper-next, .swiper-prev {
+  cursor: pointer;
+}
+.swiper-next {
+  position: absolute;
+  bottom: 37%;
+  right: 0;
+}
+.swiper-prev {
+  position: absolute;
+  bottom: 37%;
+  left: 0;
+}
+.swiper-next[aria-disabled="true"] svg path, .swiper-prev[aria-disabled="true"] svg path{
+  stroke: #88877D;
+}
+.category-slider__link {
+  text-decoration: none;
+  color: #403F38;
+  font-family: 'Hanken Grotesk';
+  font-size: clamp(1.6rem, 2vw, 2.2rem);
+  font-weight: 500;
+  line-height: 28.6px;
+  text-align: center;
+}
+.category-slider__link:hover {
+  color: #622B1E;
+}
+.category-slider__title .category-slider__title-text {
+  margin-inline: auto;
+  max-width: 134px;
+}
+.category-slider__heading {
+  margin: 100px 0 50px;
+}
+@media screen and (min-width: 750px) {
+  .category-slider__heading {
+    font-size: 6.2rem;
+    line-height: 5.58rem;
+  }
+}
+/* ===================== End - Shop by category ======================*/
+
+/* ===================== USP section ================================= */
+
+.page-container{
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 5rem;
+  margin: 0 auto;
+}
+.page-row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-block: 8rem;
+}
+.iconwith-page_wrapper .icon-block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* .iconwith-page_wrapper .icon-block:first-child {
+  padding-left: 0;
+}
+
+.iconwith-page_wrapper .icon-block:last-child {
+  padding-right: 0;
+} */
+
+/* .iconwith-page_wrapper .icon-block:not(:last-child) {
+  position: relative;
+}
+
+.iconwith-page_wrapper .icon-block:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #8B4636;
+} */
+
+
+a.icon-block {
+  text-decoration: none;
+  color: unset;
+}
+.icon-block figure{
+  display: flex;
+}
+.icon-block .content h3{
+  margin: 0;
+  font-family: 'Crimson Pro';
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+.icon-block .content p{
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-color-black);
+}
+.page-row .block-separator {
+  display: block;
+  width: 1px;
+  background: #8B4636;
+  align-self: stretch;
+}
+@media screen and (min-width: 750px) {
+  .iconwith-page_wrapper .icon-block {
+    max-width: 176px;
+    margin-bottom: 15px;
+  }
+}
+/* ===================== End - USP section ================================= */
+
+/*  ======================== shop by craft section ========================== */
+.shop-by-craft .shop-by-craft__items {
+  display: flex;
+  gap: 20px;
+}
+
+.shop-by-craft .shop-by-craft__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0;
+}
+.shop-by-craft__items {
+  padding-block: 4rem;
+}
+.shop-by-craft__items .shop-by-craft__item {
+  position: relative;
+}
+.shop-by-craft__item .shop-by-craft__item-content{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 125px 0 24px 0;
+  background: linear-gradient(180deg, rgba(48, 19, 12, 0) 0%, #30130C 100%);
+}
+.shop-by-craft .shop-by-craft__heading {
+  font-family: 'Crimson Text';
+  font-size: 6.2rem;
+  line-height: 5.58rem;
+  text-align: center;
+  margin: 0;
+}
+.shop-by-craft__item-content .shop-by-craft__cta-button{
+  background-color: #F3F1E4E5;
+  color: #622B1E;
+  margin-top: 3.2rem;
+  font-family: 'Hanken Grotesk';
+  font-size: 1.4rem;
+  padding: 14px 33px;
+}
+.shop-by-craft__cta-button.button::after {
+  content: none;
+}
+.shop-by-craft__item-content .shop-by-craft__cta-button:hover {
+  background-color: #FFFFFF;
+}
+.shop-by-craft__item-title {
+  font-family: 'Crimson Text';
+  color: #FFFFFF;
+  margin: 0;
+}
+.shop-by-craft__item-description {
+  margin: 0;
+  font-family: 'Hanken Grotesk';
+  color: #FFFFFF;
+}
+.sbc-image {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  height: auto;
+}
+.shop-by-craft__view-all {
+  padding-top: 2rem;
+}
+.shop-by-craft__view-all .shop-by-craft__view-all-button {
+  background-color: #622B1E;
+  font-family: 'Hanken Grotesk';
+  font-size: 2rem;
+  line-height: 1.8rem;
+  font-weight: 800;
+  padding: 25px 57px;
+}
+.shop-by-craft__view-all-button.button::after {
+  content: none;
+}
+@media screen and (min-width: 750px) {
+  .shop-by-craft__item-title {
+    font-size: 3.4rem;
+  }
+  .shop-by-craft__item-description {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 14.4px;
+  }
+}
+/*  ======================== end - shop by craft section ========================== */
+
+/* =========================== image banner ===================== */
+.banner__box .banner__title, .banner__box .banner__text {
+  font-family: 'Hanken Grotesk';
+  font-size: 3.6rem;
+  line-height: 3.24rem;
+  text-align: center;
+  font-weight: normal;
+  color: #FFFFFF;
+}
+.banner__box .banner__heading {
+  font-family: 'Crimson Text';
+  font-size: 10rem;
+  line-height: 10rem;
+  font-weight: normal;
+}
+.banner__buttons .button-custom {
+  font-family: Hanken Grotesk;
+  font-size: 2rem;
+  line-height: 1.8rem;
+  font-weight: 800;
+  padding: 0 60.2px;
+  min-height: 68px;
+  
+}
+@media screen and (min-width: 750px) {
+  .banner__content {
+      /* padding: 14rem !important; */
+  }
+  .banner--medium.banner--desktop-transparent .banner__box{
+     max-width: unset !important;
+  }
+}
+/* =========================== end - image banner ===================== */
+
+/* =================================== video section ============================= */
+.videos-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-custom .video-section__poster img {
+  object-fit: cover;
+}
+
+.video-custom {
+  position: relative;
+}
+.video-custom .text-content-2, .video-custom .text-content-1 {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  color: #fff;
+  width: 100%;
+  padding: 152px  42px 42px 42px;
+  background: linear-gradient(180deg, rgba(48, 19, 12, 0) 0%, rgba(48, 19, 12, 0.8) 100%);
+}
+.video-custom .deferred-media__poster-button .svg-wrapper .icon-play path {
+  fill: #622B1E;
+}
+.text-content-1 .text-title-1, .text-content-2 .text-title-2 {
+  font-family: 'Crimson Text';
+  font-weight: 400;
+  font-size: 6.2rem;
+  line-height: 0.9;
+}
+.text-content-1 .text-subtitle-1, .text-content-2 .text-subtitle-2 {
+  font-family: 'Hanken Grotesk';
+  font-size: 3.1rem;
+  font-weight: normal;
+  line-height: 1.1;
+}
+.global-media-settings {
+  border: 0;
+}
+@media screen and (min-width: 750px) {
+  .videos-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+  .videos-container .video-custom {
+    width: 50%;
+  }
+  .text-content-1 .text-title-1, .text-content-2 .text-title-2 {
+    font-size: 6.2rem;
+  }
+  .text-content-1 .text-subtitle-1, .text-content-2 .text-subtitle-2 {
+    font-size: 3.1rem;
+  }
+  .video-custom .video-2__poster {
+    /* margin-left: 5px; */
+  }
+}
+/* =================================== end - video section ============================= */
+
+/* ====================== Review ==============================*/
+.section-review__heading {
+  font-family: 'Crimson Text';
+  font-weight: 400;
+  font-size: 6.2rem;
+  line-height: 0.9;
+  text-align: center;
+  margin-block: 0.65em;
+}
+.section-review__content {
+  display: flex;
+  /* gap: 6rem; */
+  box-shadow: 0px 4px 16px 0px #0000000A;
+  max-height: 490px;
+}
+.section-review__image {
+  min-width: 42%;
+}
+.section-review__content:after {
+  content: url('https://cdn.shopify.com/s/files/1/0701/7902/9028/files/quote.svg');
+  position: absolute;
+  right: 0;
+  z-index: 0;
+}
+.section-review__content .section-review__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* max-width: 40%; */
+  padding: 40px 34px;
+  min-width: 48.5%;
+  background: #ffffff;
+  max-height: 490px;
+}
+.section-review__image .review-image {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.section-review__rating {
+  min-width: 5rem;
+}
+.section-review__details .section-review__title {
+  font-family: 'Crimson Text';
+  font-weight: 400;
+  font-size: 3.2rem;
+  line-height: 1;
+  margin: 14px 0 24px;
+  color: #22211E;
+}
+.section-review__details .section-review__text {
+  font-family: 'Hanken Grotesk';
+  font-weight: normal;
+  font-size: 2.2rem;
+  line-height: 1.5;
+  margin: 0;
+  padding-bottom: 2.5em;
+  color: #3B3535;
+}
+.section-review__meta {
+  padding-top: 1.5em;
+  border-top: 1px solid #D9D9D9;
+}
+.section-review__meta .section-review__name {
+  font-family: 'Crimson Text';
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 1.11;
+  color: #622B1E;
+}
+.section-review__meta .section-review__place {
+  font-family: 'Hanken Grotesk';
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.1;
+  color: #3B3535;
+}
+.review-pagination {
+  text-align: center;
+  padding-top: 5rem;
+}
+.review-pagination .swiper-pagination-bullet {
+  background: #C0BDAC;
+  opacity: 1;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.review-pagination .swiper-pagination-bullet-active {
+  background: #622B1E;
+}
+.review-pagination .swiper-pagination-bullet{
+  margin: 0 5px !important;
+}
+/* ====================== End Review ==============================*/
+
+/* ================================== footer ============================*/
+.button.store-button {
+  background: none;
+}
+.footer .grid .grid__item {
+  max-width: 18%;
+}
+.footer {
+  .footer-block.footer-brand_information {
+    padding-right: 60px;
+    margin-right: 120px;
+    border-right: 1px solid #854D40;
+  }
+  .footer-block.footer-link_list.footer-block--menu {
+    max-width: 17%;
+  }
+  h2.footer-block__heading.inline-richtext {
+    font-family: 'Crimson Text';
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 25.2px;
+  }
+  .link.link--text.list-menu__item.list-menu__item--link:hover {
+    color: #E6D565;
+  }
+  .link.link--text.list-menu__item.list-menu__item--link {
+    font-family: 'Hanken Grotesk';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    text-decoration: none;
+    color: #F3F1E4;
+  }
+  .footer__blocks-wrapper {
+    justify-content: space-between;
+  }
+  .footer-block.grid__item.footer-text {
+    max-width: 13%;
+  }
+  .footer-block__details-content .list-menu__item--link:hover, .copyright__content a:hover {
+    color: #E6D565;
+    text-decoration: none;
+    text-underline-offset: .3rem;
+  }
+  .footer-block__details-content.rte h3 {
+    font-size: 20px;
+  }
+  .footer-block__details-content.rte > * {
+    margin: 0;
+  }
+  .footer-block__details-content {
+    margin-bottom: 20px;
+  }
+  .footer-block .store-button:after{
+    display: none;
+  }
+  .footer-block .store-button:before{
+    display: none;
+  }
+  .footer-block .store-button{
+    min-height: 48px;
+    border: 1px solid #91584A;
+    padding: 0 29px;
+    font-size: 14px;
+  }
+  .list-social__item .svg-wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+  }
+  .list-social__link {
+    padding: 0 15px 0 0;
+  }
+  .footer-block__image-wrapper {
+    margin-bottom: 3.2rem;
+  }
+  .footer__content-bottom-wrapper {
+    justify-content: center;
+  }
+  .footer__copyright.caption .copyright__content {
+    font-size: 16px;
+    font-family: 'Hanken Grotesk';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .footer__content-bottom {
+    padding-top: 36px;
+}
+}
+/* ================================== end footer ============================*/
+/* ================================== product page ========================== */
+.product__title h1 {
+  font-family: Crimson Text;
+  font-size: 62px;
+  font-weight: 400;
+  line-height: 62px;
+  color: #31302B;
+}
+.product--large:not(.product--no-media) .product__info-wrapper {
+  padding: 0 0 0 6rem;
+}

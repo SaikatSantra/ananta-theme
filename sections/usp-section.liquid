@@ -1,0 +1,113 @@
+<style>
+  #shopify-section-{{ section.id }} {
+    background-color: {{ section.settings.background_color }};
+  }
+  .iconwith-page_wrapper {
+    position: relative;
+    z-index: 1;
+  }
+  .iconwith-page_wrapper::before {
+    content: url('{{ "usp-downleft.svg" | asset_url }}');
+    display: inline-block;
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+  }
+  .iconwith-page_wrapper::after {
+    content: url('{{ "usp-upright.svg" | asset_url }}');
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+</style>
+<section class="iconwith-page_wrapper">
+  <div class="page-width">
+    <div class="page-row">
+    {%- for block in section.blocks -%}
+    {% if block.settings.add_url != blank %}
+    <a href="{{ block.settings.add_url }}" class="icon-block">
+    {% else %}
+    <div class="icon-block">
+    {% endif %}
+      <figure>
+        {%- if block.settings.select_icon != blank -%}
+           {%- capture sizes -%}
+                  (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
+                  (min-width: 40px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
+                {%- endcapture -%}
+                {{
+                  block.settings.select_icon
+                   | image_url: width: 100
+                  | image_tag: sizes: sizes, widths: '100'
+                }}
+              {%- else -%}
+                {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+      </figure>
+      <div class="content">
+          {%- if block.settings.heading_text != blank -%}
+            <h3>{{ block.settings.heading_text }}</h3>
+          {%- endif -%}
+        {%- if block.settings.icon_description != blank -%}
+          <p>{{ block.settings.icon_description }}</p>
+        {%- endif -%}
+      </div>
+    {% if block.settings.add_url != blank %}
+    </a>
+      {% else %}
+    </div>
+    {% unless forloop.last %}
+      <div class="block-separator"></div>
+    {% endunless %}
+    {% endif %}
+    {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "USP Section",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#622B1E"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "icon-column",
+      "name": "Icon Column",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Select Icon",
+          "id": "select_icon",
+          "info": "Add SVG file"
+        },
+        {
+          "type": "url",
+          "label": "Add URL",
+          "id": "add_url"
+        },
+        {
+          "type": "text",
+          "label": "Heading Text",
+          "id": "heading_text"
+        }
+      ],
+      "limit": 5
+    }
+  ],
+  "presets": [
+    {
+      "name": "USP Section"
+    }
+  ]
+}
+{% endschema %}

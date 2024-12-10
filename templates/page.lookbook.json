@@ -1,0 +1,50 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "lookbook_section_CzXCBC": {
+      "type": "lookbook-section",
+      "blocks": {
+        "collection_fMf6wm": {
+          "type": "collection",
+          "settings": {
+            "collection_title": "",
+            "select_collection": "ajrakh-kurtas"
+          }
+        },
+        "collection_VkwGr8": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection_title": "",
+            "select_collection": "ajrakh-kurtas"
+          }
+        },
+        "collection_gzCpPx": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection_title": "",
+            "select_collection": "ajrakh-kurtas"
+          }
+        }
+      },
+      "block_order": [
+        "collection_fMf6wm",
+        "collection_VkwGr8",
+        "collection_gzCpPx"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "lookbook_section_CzXCBC"
+  ]
+}

@@ -1,0 +1,477 @@
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Browse our latest products",
+            "heading_size": "h0"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "slideshow_aHWU4m": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_C6t6rN": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner_1.png",
+            "heading": "Ajrakh Kurtas Collection",
+            "heading_size": "h0",
+            "subheading": "Master artisans from Gujarat",
+            "button_label": "SHOP NOW",
+            "link": "shopify:\/\/collections\/all",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-2599b5ee-194b-4dd6-81be-87dcee12718c",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_ckcypY": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/22_1.jpg",
+            "heading": "Ajrakh Kurtas Collection",
+            "heading_size": "h0",
+            "subheading": "Master artisans from Gujarat",
+            "button_label": "SHOP NOW",
+            "link": "shopify:\/\/collections\/all",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-2599b5ee-194b-4dd6-81be-87dcee12718c",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_C6t6rN",
+        "slide_ckcypY"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "shop_by_category_GwAfRB": {
+      "type": "shop-by-category",
+      "blocks": {
+        "category_mxVaPy": {
+          "type": "category",
+          "settings": {
+            "category_name": "Ajrakh Kurtas",
+            "add_image": "shopify:\/\/shop_images\/Frame_715.png",
+            "add_url": "shopify:\/\/collections"
+          }
+        },
+        "category_iEq8D6": {
+          "type": "category",
+          "settings": {
+            "category_name": "Ajrakh Kurtas",
+            "add_image": "shopify:\/\/shop_images\/Frame_715.png",
+            "add_url": "shopify:\/\/collections"
+          }
+        },
+        "category_Uh6Hct": {
+          "type": "category",
+          "settings": {
+            "category_name": "Ajrakh Kurtas",
+            "add_image": "shopify:\/\/shop_images\/Frame_715.png",
+            "add_url": "shopify:\/\/collections"
+          }
+        },
+        "category_cPqCHM": {
+          "type": "category",
+          "settings": {
+            "category_name": "Ajrakh Kurtas",
+            "add_image": "shopify:\/\/shop_images\/Frame_715.png",
+            "add_url": "shopify:\/\/collections"
+          }
+        },
+        "category_wawyQd": {
+          "type": "category",
+          "settings": {
+            "category_name": "Ajrakh Kurtas",
+            "add_image": "shopify:\/\/shop_images\/Frame_715.png",
+            "add_url": "shopify:\/\/collections"
+          }
+        },
+        "category_zm39XD": {
+          "type": "category",
+          "settings": {
+            "category_name": "Ajrakh Kurtas",
+            "add_image": "shopify:\/\/shop_images\/Frame_715.png",
+            "add_url": "shopify:\/\/collections"
+          }
+        },
+        "category_fXyP4C": {
+          "type": "category",
+          "settings": {
+            "category_name": "Ajrakh Kurtas",
+            "add_image": "shopify:\/\/shop_images\/Frame_715.png",
+            "add_url": "shopify:\/\/collections"
+          }
+        },
+        "category_rCi4ea": {
+          "type": "category",
+          "settings": {
+            "category_name": "Ajrakh Kurtas",
+            "add_image": "shopify:\/\/shop_images\/Frame_715.png",
+            "add_url": "shopify:\/\/collections"
+          }
+        }
+      },
+      "block_order": [
+        "category_mxVaPy",
+        "category_iEq8D6",
+        "category_Uh6Hct",
+        "category_cPqCHM",
+        "category_wawyQd",
+        "category_zm39XD",
+        "category_fXyP4C",
+        "category_rCi4ea"
+      ],
+      "settings": {
+        "heading": "Shop by Category"
+      }
+    },
+    "usp_section_FMwyJn": {
+      "type": "usp-section",
+      "blocks": {
+        "icon_column_3kgkWm": {
+          "type": "icon-column",
+          "settings": {
+            "select_icon": "shopify:\/\/shop_images\/sustainable.svg",
+            "add_url": "",
+            "heading_text": "Sustainable and ethically made"
+          }
+        },
+        "icon_column_FbQTUa": {
+          "type": "icon-column",
+          "settings": {
+            "select_icon": "shopify:\/\/shop_images\/customize.svg",
+            "add_url": "",
+            "heading_text": "Customizable Fittings"
+          }
+        },
+        "icon_column_i8yKTd": {
+          "type": "icon-column",
+          "settings": {
+            "select_icon": "shopify:\/\/shop_images\/attention.svg",
+            "add_url": "",
+            "heading_text": "Attention to Detail"
+          }
+        },
+        "icon_column_wBTqKY": {
+          "type": "icon-column",
+          "settings": {
+            "select_icon": "shopify:\/\/shop_images\/return.svg",
+            "add_url": "",
+            "heading_text": "7 day return and exchange Policy"
+          }
+        },
+        "icon_column_D7xLpg": {
+          "type": "icon-column",
+          "settings": {
+            "select_icon": "shopify:\/\/shop_images\/handcraft.svg",
+            "add_url": "",
+            "heading_text": "Handcrafted by Artisans"
+          }
+        }
+      },
+      "block_order": [
+        "icon_column_3kgkWm",
+        "icon_column_FbQTUa",
+        "icon_column_i8yKTd",
+        "icon_column_wBTqKY",
+        "icon_column_D7xLpg"
+      ],
+      "settings": {
+        "background_color": "#622b1e"
+      }
+    },
+    "shop_by_craft_MCyaAb": {
+      "type": "shop-by-craft",
+      "blocks": {
+        "craft_98a33B": {
+          "type": "craft",
+          "settings": {
+            "craft_title": "Ajrakh Kurtas",
+            "select_image": "shopify:\/\/shop_images\/image_15.jpg",
+            "description": "Master artisans from Gujarat",
+            "add_url": "shopify:\/\/collections\/frontpage",
+            "url_text": "SHOP NOW"
+          }
+        },
+        "craft_PMhWeF": {
+          "type": "craft",
+          "settings": {
+            "craft_title": "Ajrakh Kurtas",
+            "select_image": "shopify:\/\/shop_images\/image_15.jpg",
+            "description": "Master artisans from Gujarat",
+            "add_url": "shopify:\/\/collections\/frontpage",
+            "url_text": "SHOP NOW"
+          }
+        },
+        "craft_UaifEz": {
+          "type": "craft",
+          "settings": {
+            "craft_title": "Ajrakh Kurtas",
+            "select_image": "shopify:\/\/shop_images\/image_15.jpg",
+            "description": "Master artisans from Gujarat",
+            "add_url": "shopify:\/\/collections\/frontpage",
+            "url_text": "SHOP NOW"
+          }
+        },
+        "craft_6QHLMP": {
+          "type": "craft",
+          "settings": {
+            "craft_title": "Ajrakh Kurtas",
+            "select_image": "shopify:\/\/shop_images\/image_15.jpg",
+            "description": "Master artisans from Gujarat",
+            "add_url": "shopify:\/\/collections\/frontpage",
+            "url_text": "SHOP NOW"
+          }
+        }
+      },
+      "block_order": [
+        "craft_98a33B",
+        "craft_PMhWeF",
+        "craft_UaifEz",
+        "craft_6QHLMP"
+      ],
+      "settings": {
+        "heading": "Shop by Craft",
+        "button_text": "VIEW ALL PRODUCTS",
+        "button_link": "shopify:\/\/collections"
+      }
+    },
+    "image_banner_ELHDPX": {
+      "type": "image-banner",
+      "blocks": {
+        "icon_Q6Gx8w": {
+          "type": "icon",
+          "settings": {
+            "banner_icon": "shopify:\/\/shop_images\/Group_1.svg"
+          }
+        },
+        "title_97mGN6": {
+          "type": "title",
+          "settings": {
+            "title": "Made in Bengal"
+          }
+        },
+        "heading_wtU6XR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Meera Collection",
+            "heading_size": "h1"
+          }
+        },
+        "text_EcjBN7": {
+          "type": "text",
+          "settings": {
+            "text": "Hand embroidered by local artisans of west bengal",
+            "text_style": "body"
+          }
+        },
+        "buttons_6iiTrJ": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "VIEW ALL PRODUCTS",
+            "button_link_1": "shopify:\/\/collections",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "icon_Q6Gx8w",
+        "title_97mGN6",
+        "heading_wtU6XR",
+        "text_EcjBN7",
+        "buttons_6iiTrJ"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_1.jpg",
+        "image_2": "shopify:\/\/shop_images\/image_2.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-2599b5ee-194b-4dd6-81be-87dcee12718c",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "video_QeVaR8": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "cover_image": "shopify:\/\/shop_images\/image_24_1.jpg",
+        "description": "",
+        "video1_overlay_title": "Rang",
+        "video1_overlay_subtitle": "Summer edition 2024",
+        "video_url_2": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "cover_image_2": "shopify:\/\/shop_images\/image_25.jpg",
+        "description_2": "",
+        "video2_overlay_title": "Fiza",
+        "video2_overlay_subtitle": "Festive 24",
+        "full_width": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 36
+      }
+    },
+    "review_section_XKPR4d": {
+      "type": "review-section",
+      "blocks": {
+        "review_slides_xpznFh": {
+          "type": "review_slides",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/Frame_997.png",
+            "review_title": "Elegant and Comfortable",
+            "review": "Aoho's designs are a perfect blend of style and comfort. I always feel confident and beautiful in their outfits. Their attention to detail is unmatched!\"",
+            "rating": 5,
+            "name": "Advika",
+            "place": "Kolkata"
+          }
+        },
+        "review_slides_VNtx3V": {
+          "type": "review_slides",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/Frame_9g97.png",
+            "review_title": "Flattering Fits for Every Occasion",
+            "review": "Whether it’s a casual brunch or a formal event, Aoho has something that makes me stand out. The fabrics are luxurious, and the fits are so flattering!",
+            "rating": 4,
+            "name": "Jiya",
+            "place": "Bangalore"
+          }
+        },
+        "review_slides_grDNYn": {
+          "type": "review_slides",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/Frame_997.png",
+            "review_title": "Elegant and Comfortable",
+            "review": "Aoho's designs are a perfect blend of style and comfort. I always feel confident and beautiful in their outfits. Their attention to detail is unmatched!\"",
+            "rating": 5,
+            "name": "Advika",
+            "place": "Kolkata"
+          }
+        },
+        "review_slides_y9rNgz": {
+          "type": "review_slides",
+          "settings": {
+            "review_image": "shopify:\/\/shop_images\/Frame_9g97.png",
+            "review_title": "Flattering Fits for Every Occasion",
+            "review": "Whether it’s a casual brunch or a formal event, Aoho has something that makes me stand out. The fabrics are luxurious, and the fits are so flattering!",
+            "rating": 4,
+            "name": "Jiya",
+            "place": "Bangalore"
+          }
+        }
+      },
+      "block_order": [
+        "review_slides_xpznFh",
+        "review_slides_VNtx3V",
+        "review_slides_grDNYn",
+        "review_slides_y9rNgz"
+      ],
+      "settings": {
+        "heading": "Let customers speak for us",
+        "top_padding": 0,
+        "bottom_padding": 32
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "featured_collection",
+    "slideshow_aHWU4m",
+    "shop_by_category_GwAfRB",
+    "usp_section_FMwyJn",
+    "shop_by_craft_MCyaAb",
+    "image_banner_ELHDPX",
+    "video_QeVaR8",
+    "review_section_XKPR4d"
+  ]
+}
