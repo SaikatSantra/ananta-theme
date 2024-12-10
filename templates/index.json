@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner": {
@@ -14,7 +23,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
+            "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -75,12 +84,11 @@
         "slide_C6t6rN": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/banner_1.png",
             "heading": "Ajrakh Kurtas Collection",
             "heading_size": "h0",
             "subheading": "Master artisans from Gujarat",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/all",
+            "link": "shopify://collections/all",
             "button_style_secondary": false,
             "box_align": "middle-left",
             "show_text_box": true,
@@ -93,12 +101,11 @@
         "slide_ckcypY": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/22_1.jpg",
             "heading": "Ajrakh Kurtas Collection",
             "heading_size": "h0",
             "subheading": "Master artisans from Gujarat",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/all",
+            "link": "shopify://collections/all",
             "button_style_secondary": false,
             "box_align": "middle-left",
             "show_text_box": true,
@@ -131,64 +138,56 @@
           "type": "category",
           "settings": {
             "category_name": "Ajrakh Kurtas",
-            "add_image": "shopify:\/\/shop_images\/Frame_715.png",
-            "add_url": "shopify:\/\/collections"
+            "add_url": "shopify://collections"
           }
         },
         "category_iEq8D6": {
           "type": "category",
           "settings": {
             "category_name": "Ajrakh Kurtas",
-            "add_image": "shopify:\/\/shop_images\/Frame_715.png",
-            "add_url": "shopify:\/\/collections"
+            "add_url": "shopify://collections"
           }
         },
         "category_Uh6Hct": {
           "type": "category",
           "settings": {
             "category_name": "Ajrakh Kurtas",
-            "add_image": "shopify:\/\/shop_images\/Frame_715.png",
-            "add_url": "shopify:\/\/collections"
+            "add_url": "shopify://collections"
           }
         },
         "category_cPqCHM": {
           "type": "category",
           "settings": {
             "category_name": "Ajrakh Kurtas",
-            "add_image": "shopify:\/\/shop_images\/Frame_715.png",
-            "add_url": "shopify:\/\/collections"
+            "add_url": "shopify://collections"
           }
         },
         "category_wawyQd": {
           "type": "category",
           "settings": {
             "category_name": "Ajrakh Kurtas",
-            "add_image": "shopify:\/\/shop_images\/Frame_715.png",
-            "add_url": "shopify:\/\/collections"
+            "add_url": "shopify://collections"
           }
         },
         "category_zm39XD": {
           "type": "category",
           "settings": {
             "category_name": "Ajrakh Kurtas",
-            "add_image": "shopify:\/\/shop_images\/Frame_715.png",
-            "add_url": "shopify:\/\/collections"
+            "add_url": "shopify://collections"
           }
         },
         "category_fXyP4C": {
           "type": "category",
           "settings": {
             "category_name": "Ajrakh Kurtas",
-            "add_image": "shopify:\/\/shop_images\/Frame_715.png",
-            "add_url": "shopify:\/\/collections"
+            "add_url": "shopify://collections"
           }
         },
         "category_rCi4ea": {
           "type": "category",
           "settings": {
             "category_name": "Ajrakh Kurtas",
-            "add_image": "shopify:\/\/shop_images\/Frame_715.png",
-            "add_url": "shopify:\/\/collections"
+            "add_url": "shopify://collections"
           }
         }
       },
@@ -212,7 +211,6 @@
         "icon_column_3kgkWm": {
           "type": "icon-column",
           "settings": {
-            "select_icon": "shopify:\/\/shop_images\/sustainable.svg",
             "add_url": "",
             "heading_text": "Sustainable and ethically made"
           }
@@ -220,7 +218,6 @@
         "icon_column_FbQTUa": {
           "type": "icon-column",
           "settings": {
-            "select_icon": "shopify:\/\/shop_images\/customize.svg",
             "add_url": "",
             "heading_text": "Customizable Fittings"
           }
@@ -228,7 +225,6 @@
         "icon_column_i8yKTd": {
           "type": "icon-column",
           "settings": {
-            "select_icon": "shopify:\/\/shop_images\/attention.svg",
             "add_url": "",
             "heading_text": "Attention to Detail"
           }
@@ -236,7 +232,6 @@
         "icon_column_wBTqKY": {
           "type": "icon-column",
           "settings": {
-            "select_icon": "shopify:\/\/shop_images\/return.svg",
             "add_url": "",
             "heading_text": "7 day return and exchange Policy"
           }
@@ -244,7 +239,6 @@
         "icon_column_D7xLpg": {
           "type": "icon-column",
           "settings": {
-            "select_icon": "shopify:\/\/shop_images\/handcraft.svg",
             "add_url": "",
             "heading_text": "Handcrafted by Artisans"
           }
@@ -258,7 +252,7 @@
         "icon_column_D7xLpg"
       ],
       "settings": {
-        "background_color": "#622b1e"
+        "background_color": "#7c510c"
       }
     },
     "shop_by_craft_MCyaAb": {
@@ -268,9 +262,8 @@
           "type": "craft",
           "settings": {
             "craft_title": "Ajrakh Kurtas",
-            "select_image": "shopify:\/\/shop_images\/image_15.jpg",
             "description": "Master artisans from Gujarat",
-            "add_url": "shopify:\/\/collections\/frontpage",
+            "add_url": "shopify://collections/frontpage",
             "url_text": "SHOP NOW"
           }
         },
@@ -278,9 +271,8 @@
           "type": "craft",
           "settings": {
             "craft_title": "Ajrakh Kurtas",
-            "select_image": "shopify:\/\/shop_images\/image_15.jpg",
             "description": "Master artisans from Gujarat",
-            "add_url": "shopify:\/\/collections\/frontpage",
+            "add_url": "shopify://collections/frontpage",
             "url_text": "SHOP NOW"
           }
         },
@@ -288,9 +280,8 @@
           "type": "craft",
           "settings": {
             "craft_title": "Ajrakh Kurtas",
-            "select_image": "shopify:\/\/shop_images\/image_15.jpg",
             "description": "Master artisans from Gujarat",
-            "add_url": "shopify:\/\/collections\/frontpage",
+            "add_url": "shopify://collections/frontpage",
             "url_text": "SHOP NOW"
           }
         },
@@ -298,9 +289,8 @@
           "type": "craft",
           "settings": {
             "craft_title": "Ajrakh Kurtas",
-            "select_image": "shopify:\/\/shop_images\/image_15.jpg",
             "description": "Master artisans from Gujarat",
-            "add_url": "shopify:\/\/collections\/frontpage",
+            "add_url": "shopify://collections/frontpage",
             "url_text": "SHOP NOW"
           }
         }
@@ -314,7 +304,7 @@
       "settings": {
         "heading": "Shop by Craft",
         "button_text": "VIEW ALL PRODUCTS",
-        "button_link": "shopify:\/\/collections"
+        "button_link": "shopify://collections"
       }
     },
     "image_banner_ELHDPX": {
@@ -322,9 +312,7 @@
       "blocks": {
         "icon_Q6Gx8w": {
           "type": "icon",
-          "settings": {
-            "banner_icon": "shopify:\/\/shop_images\/Group_1.svg"
-          }
+          "settings": {}
         },
         "title_97mGN6": {
           "type": "title",
@@ -350,7 +338,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "VIEW ALL PRODUCTS",
-            "button_link_1": "shopify:\/\/collections",
+            "button_link_1": "shopify://collections",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -366,8 +354,6 @@
         "buttons_6iiTrJ"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/image_1.jpg",
-        "image_2": "shopify:\/\/shop_images\/image_2.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-center",
@@ -386,13 +372,11 @@
         "heading": "",
         "heading_size": "h1",
         "enable_video_looping": false,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "cover_image": "shopify:\/\/shop_images\/image_24_1.jpg",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "description": "",
         "video1_overlay_title": "Rang",
         "video1_overlay_subtitle": "Summer edition 2024",
-        "video_url_2": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "cover_image_2": "shopify:\/\/shop_images\/image_25.jpg",
+        "video_url_2": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "description_2": "",
         "video2_overlay_title": "Fiza",
         "video2_overlay_subtitle": "Festive 24",
@@ -408,7 +392,6 @@
         "review_slides_xpznFh": {
           "type": "review_slides",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/Frame_997.png",
             "review_title": "Elegant and Comfortable",
             "review": "Aoho's designs are a perfect blend of style and comfort. I always feel confident and beautiful in their outfits. Their attention to detail is unmatched!\"",
             "rating": 5,
@@ -419,7 +402,6 @@
         "review_slides_VNtx3V": {
           "type": "review_slides",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/Frame_9g97.png",
             "review_title": "Flattering Fits for Every Occasion",
             "review": "Whether it’s a casual brunch or a formal event, Aoho has something that makes me stand out. The fabrics are luxurious, and the fits are so flattering!",
             "rating": 4,
@@ -430,7 +412,6 @@
         "review_slides_grDNYn": {
           "type": "review_slides",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/Frame_997.png",
             "review_title": "Elegant and Comfortable",
             "review": "Aoho's designs are a perfect blend of style and comfort. I always feel confident and beautiful in their outfits. Their attention to detail is unmatched!\"",
             "rating": 5,
@@ -441,7 +422,6 @@
         "review_slides_y9rNgz": {
           "type": "review_slides",
           "settings": {
-            "review_image": "shopify:\/\/shop_images\/Frame_9g97.png",
             "review_title": "Flattering Fits for Every Occasion",
             "review": "Whether it’s a casual brunch or a formal event, Aoho has something that makes me stand out. The fabrics are luxurious, and the fits are so flattering!",
             "rating": 4,
