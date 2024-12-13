@@ -1,4 +1,6 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+{{ 'video-section.css' | asset_url | stylesheet_tag }}
+{{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -13,18 +15,100 @@
     }
   }
 {%- endstyle -%}
+<style>
 
+</style>
 
 
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
-  <div class="page-width">
-    
+  <div class="page-width product-img-video">
+    <div class="sliders">
+      <!-- Video Slider -->
+      {% if product.metafields.custom.product_video and product.metafields.custom.product_video.value != empty %}
+        <div class="slider slider--videos">
+          <h2 class="video-slider__heading heading-underline">
+            {{ section.settings.video_heading }}
+          </h2>
+          <div class="swiper video-swiper-{{ section.id }}">
+            <div class="swiper-wrapper">
+              {% for video_url in product.metafields.custom.product_video.value %}
+                <div class="swiper-slide">
+                  <deferred-media class="deferred-media media global-media-settings global-media-settings--no-shadow" style="padding-top: min(calc(100vh - 12rem), {{ 1 | divided_by: video_url.aspect_ratio | times: 100 }}%)" data-media-id="{{ video_url.id }}">
+                    <button id="Deferred-Poster-Modal-{{ video_url.id }}" class="video-section__poster media deferred-media__poster" type="button" aria-label="{{ video_url.alt }}">
+                      <span class="deferred-media__poster-button motion-reduce"> <span class="svg-wrapper">{{- 'icon-play.svg' | inline_asset_content -}}</span> </span>
+                      {% liquid
+                        assign sizes = '(min-width: 1200px) calc((1200px - 10rem) / 2), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)'
+                        assign widths = '288, 576, 550, 1100'
+                      %}
+                      {{ video_url.preview_image | image_url: width: 576 | image_tag: sizes: sizes, widths: widths }}
+                    </button>
+                    <template>
+                      {{ video_url | video_tag: image_size: '1100x', autoplay: true, controls: true,   muted: false }}
+                    </template>
+                  </deferred-media>
+                </div>
+              {% endfor %}
+            </div>
+            <div class="swiper-pagination swiper-pagination--videos-{{ section.id }}"></div>
+          </div>
+        </div>
+      {% endif %}
+
+      <!-- Image Slider -->
+      {% if product.metafields.custom.product_image and product.metafields.custom.product_image.value != empty %}
+        <div class="slider slider--images">
+          <h2 class="image-slider__heading heading-underline">
+            {{ section.settings.image_gallery_heading }}
+          </h2>
+          <div class="swiper image-swiper-{{ section.id }}">
+            <div class="swiper-wrapper">
+              {% for product_image_url in product.metafields.custom.product_image.value %}
+                <div class="swiper-slide">
+                  {{
+                    product_image_url
+                    | image_url: width: 389
+                    | image_tag: class: 'gallery_image'
+                  }}
+                </div>
+              {% endfor %}
+            </div>
+            <div class="swiper-pagination swiper-pagination--images-{{ section.id }}"></div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
   </div>
 </div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Initialize video slider
+    const video_swiper{{ section.id | remove: '-' }} = new Swiper('.video-swiper-{{ section.id }}', {
+      loop: true,
+      spaceBetween: 10,
+      autoHeight: true,
+      pagination: {
+        el: '.swiper-pagination--videos-{{ section.id }}',
+        clickable: true,
+      },
+    });
 
+    // Initialize image slider
+    const image_swiper{{ section.id | remove: '-' }} = new Swiper('.image-swiper-{{ section.id }}', {
+      slidesPerView: 2,
+      spaceBetween: 10,
+      autoHeight: true,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination--images-{{ section.id }}',
+        clickable: true,
+      },
+    });
+  });
+</script>
 {% schema %}
 {
-  "name": "t:sections.image-with-text.name",
+  "name": "Video Image Gallery",
   "class": "section",
   "disabled_on": {
     "groups": ["header", "footer"]
@@ -53,12 +137,27 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "text",
+      "label": "Video Heading",
+      "id": "video_heading",
+      "default": "Videos",
+      "placeholder": "Add a video heading"
+    },
+    {
+      "type": "text",
+      "label": "Image Gallery Heading",
+      "id": "image_gallery_heading",
+      "default": "Image Gallery",
+      "placeholder": "Add a Image gallery heading"
     }
+
   ],
-  
+
   "presets": [
     {
-      "name": "t:sections.image-with-text.presets.name",
+      "name": "Video Image Gallery",
     }
   ]
 }

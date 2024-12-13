@@ -1,74 +1,5 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "button"
-      ],
-      "disabled": true,
-      "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
-      }
-    },
     "slideshow_aHWU4m": {
       "type": "slideshow",
       "blocks": {
@@ -76,6 +7,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/banner_1.png",
+            "mobile_image": "shopify:\/\/shop_images\/b1a91dade00d67079b1ceb7bfgb71e67d478.jpg",
             "heading": "Ajrakh Kurtas Collection",
             "heading_size": "h0",
             "subheading": "Master artisans from Gujarat",
@@ -94,6 +26,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/22_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/b1a91dade00d67079b1ceb7bfgb71e67d478.jpg",
             "heading": "Ajrakh Kurtas Collection",
             "heading_size": "h0",
             "subheading": "Master artisans from Gujarat",
@@ -386,12 +319,14 @@
         "heading": "",
         "heading_size": "h1",
         "enable_video_looping": false,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video": "shopify:\/\/files\/videos\/AQMV9BibYt1ORaJb_-DQ2K2Co0u4rYv8tr21BQQmlmmDzmmL6RHJXAyQn0ov13xAcKiU6qlZBlCeQwWsQbikhZDhOvPencYIwlynPM8.mp4",
+        "video_url": "",
         "cover_image": "shopify:\/\/shop_images\/image_24_1.jpg",
         "description": "",
         "video1_overlay_title": "Rang",
         "video1_overlay_subtitle": "Summer edition 2024",
-        "video_url_2": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_2": "shopify:\/\/files\/videos\/AQNsUgklx2g7J5SKP-6T-uQlxKCnzUPO31aqIfXDKNO4Qe8hyaX2YCN8GvWWUJOQX7Yt6a3bo7pTkfn5a_EnwaJeRG91DX6XK2o5gxs.mp4",
+        "video_url_2": "",
         "cover_image_2": "shopify:\/\/shop_images\/image_25.jpg",
         "description_2": "",
         "video2_overlay_title": "Fiza",
@@ -459,13 +394,11 @@
       "settings": {
         "heading": "Let customers speak for us",
         "top_padding": 0,
-        "bottom_padding": 32
+        "bottom_padding": 100
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection",
     "slideshow_aHWU4m",
     "shop_by_category_GwAfRB",
     "usp_section_FMwyJn",

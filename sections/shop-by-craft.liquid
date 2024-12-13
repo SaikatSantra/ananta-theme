@@ -6,9 +6,9 @@
     {% endif %}
 
     <!-- Crafts -->
-    <div class="shop-by-craft__items">
+    <div class="shop-by-craft__items grid grid--4-col-desktop grid--2-col-tablet grid--1-col-tablet-down">
       {% for block in section.blocks %}
-        <div class="shop-by-craft__item">
+        <div class="shop-by-craft__item grid__item">
           <!-- Image -->
           {% if block.settings.select_image %}
             <div class="shop-by-craft__item-image">

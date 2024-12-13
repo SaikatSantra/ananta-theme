@@ -49,9 +49,7 @@
       {%- if compare_at_price > price and product.quantity_price_breaks_configured? != true %} price--on-sale{% endif -%}
       {%- if compare_at_price > price and product.quantity_price_breaks_configured? %} volume-pricing--sale-badge{% endif -%}
       {%- if product.price_varies == false and product.compare_at_price_varies %} price--no-compare{% endif -%}
-      {%- if show_badges %} price--show-badge{% endif -%}
-    "
-  >
+      {%- if show_badges %} price--show-badge{% endif -%}">
     <div class="price__container">
       {%- comment -%}
         Explanation of description list:
@@ -77,22 +75,14 @@
             {%- endunless -%}
           {%- endif -%}
           <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
-          <span class="price-item price-item--regular">
-            {{-
-              'products.product.volume_pricing.price_range'
-              | t: minimum: money_price_min, maximum: money_price_max
-            -}}
-          </span>
+          <span class="price-item price-item--regular"> {{- 'products.product.volume_pricing.price_range' | t: minimum: money_price_min, maximum: money_price_max -}} </span>
         {%- else -%}
           <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
-          <span class="price-item price-item--regular dfgh">
-            {{ money_price }}
-          </span>
-          <div class="kjagd">{{'products.product.price.from_price_html' | t }}</div>
+          <span class="price-item price-item--regular dfgh"> {{ money_price }} </span>
         {%- endif -%}
       </div>
       <div class="price__sale">
-        {%- unless product.price_varies == false and product.compare_at_price_varies %}
+        {% comment %} {%- unless product.price_varies == false and product.compare_at_price_varies %}
           <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
           <span class="price-mrp">MRP</span>
           <span>
@@ -104,11 +94,9 @@
               {% endif %}
             </s>
           </span>
-        {%- endunless -%}
+        {%- endunless -%} {% endcomment %}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
-        <span class="price-item price-item--sale price-item--last">
-          {{ money_price | remove: 'Rs.' }}
-        </span>
+        <span class="price-item price-item--sale price-item--last"> {{ money_price | remove: 'Rs.' }} </span>
       </div>
       <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
         <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
@@ -124,15 +112,11 @@
           </span>
         </span>
       </small>
+      <div class="tax-text">  </div>
     </div>
     {%- if show_badges -%}
-      <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
-        {{ 'products.product.on_sale' | t }}
-      </span>
-
-      <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">
-        {{ 'products.product.sold_out' | t }}
-      </span>
+      <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}"> {{ 'products.product.on_sale' | t }}</span>
+      <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
     {%- endif -%}
   </div>
 {% endunless %}

@@ -49,8 +49,9 @@
 
 {% assign t = template | split: '.' | first %}
 
-<div class="breadcrumbs-container page-width">
-<nav class="breadcrumbs" role="navigation" aria-label="breadcrumbs">
+<div class="breadcrumbs-container">
+<nav class="breadcrumbs " role="navigation" aria-label="breadcrumbs">
+  <div class="page-width">
   <ol>
     <li>
       <a href="/" title="Home">Home</a>
@@ -119,6 +120,9 @@
   {% endcase %}
 
   </ol>
+  
+
+</div>
 </nav>
 </div>
 {% endunless %}

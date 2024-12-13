@@ -20,25 +20,15 @@
         },
         "collection_VkwGr8": {
           "type": "collection",
-          "disabled": true,
           "settings": {
             "collection_title": "",
-            "select_collection": "ajrakh-kurtas"
-          }
-        },
-        "collection_gzCpPx": {
-          "type": "collection",
-          "disabled": true,
-          "settings": {
-            "collection_title": "",
-            "select_collection": "ajrakh-kurtas"
+            "select_collection": "bagh-printed-kurtas"
           }
         }
       },
       "block_order": [
         "collection_fMf6wm",
-        "collection_VkwGr8",
-        "collection_gzCpPx"
+        "collection_VkwGr8"
       ],
       "settings": {}
     }

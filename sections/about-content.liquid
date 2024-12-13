@@ -1,0 +1,51 @@
+{% liquid
+    assign sizes = '100vw'
+    assign widths = '375, 420'
+  %}
+
+
+
+
+
+<div class="about-content-section">
+    <div class="page-width page-width--narrow about-content-container">
+        <div class="about-heading-text">
+            <h2></h2>
+            <div class="about-heading-cont">
+
+            </div>
+        </div>
+        <div class="about-boldcontent">
+
+        </div>
+        <div class="about-content-image">
+              {{
+                block.settings.select_image
+                | image_url: width: 420
+                | image_tag: class: 'sbc-image', sizes: sizes, widths: widths
+              }}
+        </div>
+        <div class="about-icon-heading-cont">
+            <h3><span>{{
+                block.settings.select_image
+                | image_url: width: 420
+                | image_tag: class: 'sbc-image', sizes: sizes, widths: widths
+              }}</span></h3>
+            <div class="about-icon-text">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

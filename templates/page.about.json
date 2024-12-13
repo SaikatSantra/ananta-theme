@@ -1,42 +1,423 @@
 {
   "sections": {
-    "image_banner_MNL4DQ": {
-      "type": "image-banner",
+    "slideshow_Raxrzi": {
+      "type": "slideshow",
       "blocks": {
-        "title_EdRYDy": {
-          "type": "title",
+        "slide_8V46Cq": {
+          "type": "slide",
           "settings": {
-            "title": "{{ page.title }}"
+            "image": "shopify:\/\/shop_images\/banner_2.png",
+            "mobile_image": "shopify:\/\/shop_images\/banner_2.png",
+            "heading": "{{ page.title }}",
+            "heading_size": "h2",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-2599b5ee-194b-4dd6-81be-87dcee12718c",
+            "text_alignment_mobile": "center"
           }
         }
       },
       "block_order": [
-        "title_EdRYDy"
+        "slide_8V46Cq"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/banner_2.png",
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "desktop_content_position": "middle-left",
-        "show_text_box": false,
-        "desktop_content_alignment": "left",
-        "color_scheme": "",
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
         "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
+        "show_text_below": true,
+        "accessibility_info": ""
       }
     },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "rich_text_HmrRmU": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_QXdmRW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Who we are",
+            "heading_size": "hxl"
+          }
+        },
+        "text_y3mP7B": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Welcome to <strong>aoho!<\/strong> an Indian ethnic wear brand that celebrates the diversity and beauty of <strong>Indian culture<\/strong>. At <strong>aoho!<\/strong> we partner with local artisans to bring you unique designs that reflect the artistry and <strong>craftsmanship<\/strong> of India's rich cultural heritage.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QXdmRW",
+        "text_y3mP7B"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-75085338-b232-4c70-9b4a-efbf847c685b",
+        "full_width": false,
+        "narrow_width": true,
+        "top_bottom_border": false,
+        "border_color": "#622b1e",
+        "border_thickness": 2,
+        "padding_top": 24,
+        "padding_bottom": 52,
+        "margin_top": 52,
+        "margin_bottom": 0
+      }
+    },
+    "rich_text_bnMKHY": {
+      "type": "rich-text",
+      "blocks": {
+        "text_RHfkcE": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>At aoho! we go beyond being just a brand; we're a movement that is redefining the way women experience ethnic wear.<\/h2>"
+          }
+        }
+      },
+      "block_order": [
+        "text_RHfkcE"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-979f35d5-e3a8-4949-ac3b-a78bdccbaf61",
+        "full_width": false,
+        "narrow_width": true,
+        "top_bottom_border": true,
+        "border_color": "#c0b6b6",
+        "border_thickness": 1,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 0,
+        "margin_bottom": 44
+      }
+    },
+    "image_with_text_FRYCRd": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_p73pUz": {
+          "type": "heading",
+          "settings": {
+            "heading": "Handcrafted by master artisans",
+            "heading_size": "hxl"
+          }
+        },
+        "text_TmrpRQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We take pride in the fact that our collection is handcrafted, featuring exquisite handblock prints, ikkat, bengal cotton and mangalagiri fabrics. As a brand, we use natural colors extracted from fruits and vegetables in our dyeing process. Our fabrics are crafted through a meticulous, labor-intensive process where every step from sourcing to packaging is done by hand. This results in unique and one-of-a-kind pieces that reflect the artistry and craftsmanship of India's rich cultural heritage.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_p73pUz",
+        "text_TmrpRQ"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_41.jpg",
+        "height": "adapt",
+        "page_width_narrow": true,
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_yHRypG": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_8pGFYA": {
+          "type": "heading",
+          "settings": {
+            "heading": "Fair Wages",
+            "heading_size": "h1",
+            "select_icon": "shopify:\/\/shop_images\/money-manager-svgrepo-com_1.svg"
+          }
+        },
+        "text_9GjFWA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At <strong>aoho!<\/strong>, we strongly believe in providing fair wages to our artists, ensuring that they have a sustainable livelihood while pursuing their craft. We strive to create a sense of community among our artists and are committed to paying them fairly without any negotiations. This not only enriches their art but also helps to uplift their lives and the lives of their families.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8pGFYA",
+        "text_9GjFWA"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": false,
+        "narrow_width": true,
+        "top_bottom_border": true,
+        "border_color": "#622b1e",
+        "border_thickness": 2,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "margin_top": 56,
+        "margin_bottom": 52
+      }
+    },
+    "rich_text_UxQemR": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_QfFXFn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Size-Inclusive",
+            "heading_size": "h1",
+            "select_icon": "shopify:\/\/shop_images\/Group_445.svg"
+          }
+        },
+        "text_MEmER7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We strive to break stereotypes surrounding women's sizes and promote body <strong>positivity<\/strong>. We believe  that every woman deserves to feel beautiful and confident in her own skin, which is why we celebrate size inclusivity. Our mission is to empower women to express their unique style and individuality through our handcrafted creations.\u2028We offer a <strong>size-inclusive range<\/strong>, catering to women from <strong>XS<\/strong> to <strong>10XL<\/strong>.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QfFXFn",
+        "text_MEmER7"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": false,
+        "narrow_width": true,
+        "top_bottom_border": true,
+        "border_color": "#622b1e",
+        "border_thickness": 2,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "margin_top": 52,
+        "margin_bottom": 52
+      }
+    },
+    "image_with_text_aU79Fn": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_CnUwWV": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Founder",
+            "heading_size": "h1"
+          }
+        },
+        "text_QbLrcq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Anindita, the founder of Aoho, is an engineer-turned-fashion designer who pursued her childhood dream of starting a clothing line. Beginning with just one tailor in December 2019. Today, with a team of 10 members and over 60+ artisans, aoho’s handcrafted clothing has a wide reach, catering to customers both in India and internationally.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_CnUwWV",
+        "text_QbLrcq"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_42.jpg",
+        "height": "adapt",
+        "page_width_narrow": true,
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_3atV9g": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_dfqGCb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Naming Our Brand",
+            "heading_size": "h1"
+          }
+        },
+        "text_YPaGjg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Despite brainstorming for several months, we were unable to find a name that truly resonated with us. However, as the saying goes, beautiful things often happen unexpectedly and at the most unexpected moments. It was during one such moment, while sitting at a bus stop in Chennai, that my partner suggested the name 'aoho!'. This simple yet catchy name immediately struck a chord with us and encapsulated the essence of our brand. And so, aoho! was born at 4am in a bus stand, serving as a beautiful reminder that sometimes, the best ideas come to us when we least expect them.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dfqGCb",
+        "text_YPaGjg"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": false,
+        "narrow_width": true,
+        "top_bottom_border": true,
+        "border_color": "#622b1e",
+        "border_thickness": 2,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "margin_top": 52,
+        "margin_bottom": 52
+      }
+    },
+    "usp_section_GBj63z": {
+      "type": "usp-section",
+      "blocks": {
+        "icon_column_T3x3Pd": {
+          "type": "icon-column",
+          "settings": {
+            "select_icon": "shopify:\/\/shop_images\/sustainable.svg",
+            "add_url": "",
+            "heading_text": "Sustainable and ethically made"
+          }
+        },
+        "icon_column_XPbr9C": {
+          "type": "icon-column",
+          "settings": {
+            "select_icon": "shopify:\/\/shop_images\/customize.svg",
+            "add_url": "",
+            "heading_text": "Customizable Fittings"
+          }
+        },
+        "icon_column_JCGmLW": {
+          "type": "icon-column",
+          "settings": {
+            "select_icon": "shopify:\/\/shop_images\/attention.svg",
+            "add_url": "",
+            "heading_text": "Attention to Detail"
+          }
+        },
+        "icon_column_4GLUw9": {
+          "type": "icon-column",
+          "settings": {
+            "select_icon": "shopify:\/\/shop_images\/return.svg",
+            "add_url": "",
+            "heading_text": "7 day return and exchange Policy"
+          }
+        },
+        "icon_column_eTFYQz": {
+          "type": "icon-column",
+          "settings": {
+            "select_icon": "shopify:\/\/shop_images\/handcraft.svg",
+            "add_url": "",
+            "heading_text": "Handcrafted by Artisans"
+          }
+        }
+      },
+      "block_order": [
+        "icon_column_T3x3Pd",
+        "icon_column_XPbr9C",
+        "icon_column_JCGmLW",
+        "icon_column_4GLUw9",
+        "icon_column_eTFYQz"
+      ],
+      "settings": {
+        "background_color": "#622b1e"
+      }
+    },
+    "shop_by_craft_z8aVmL": {
+      "type": "shop-by-craft",
+      "blocks": {
+        "craft_GVF97z": {
+          "type": "craft",
+          "settings": {
+            "craft_title": "Ajrakh Kurtas",
+            "select_image": "shopify:\/\/shop_images\/image_15.jpg",
+            "description": "Master artisans from Gujarat",
+            "add_url": "shopify:\/\/collections\/ajrakh-kurtas",
+            "url_text": "SHOP NOW"
+          }
+        },
+        "craft_xaQTNW": {
+          "type": "craft",
+          "settings": {
+            "craft_title": "Bagh Printed Kurtas",
+            "select_image": "shopify:\/\/shop_images\/image.jpg",
+            "description": "Master artisans from Gujarat",
+            "add_url": "shopify:\/\/collections\/bagh-printed-kurtas",
+            "url_text": "SHOP NOW"
+          }
+        },
+        "craft_KzYChV": {
+          "type": "craft",
+          "settings": {
+            "craft_title": "Katha Collection",
+            "select_image": "shopify:\/\/shop_images\/image_16.jpg",
+            "description": "Master artisans from Gujarat",
+            "add_url": "shopify:\/\/collections\/bagh-printed-kurtas",
+            "url_text": "SHOP NOW"
+          }
+        },
+        "craft_3jqzDi": {
+          "type": "craft",
+          "settings": {
+            "craft_title": "Sanganeri Collection",
+            "select_image": "shopify:\/\/shop_images\/image_17.jpg",
+            "description": "Master artisans from Gujarat",
+            "add_url": "shopify:\/\/collections\/ajrakh-kurtas",
+            "url_text": "SHOP NOW"
+          }
+        }
+      },
+      "block_order": [
+        "craft_GVF97z",
+        "craft_xaQTNW",
+        "craft_KzYChV",
+        "craft_3jqzDi"
+      ],
+      "settings": {
+        "heading": "Shop by Craft",
+        "button_text": "VIEW ALL PRODUCTS",
+        "button_link": "shopify:\/\/collections\/all"
+      }
     }
   },
   "order": [
-    "image_banner_MNL4DQ",
-    "main"
+    "slideshow_Raxrzi",
+    "main",
+    "rich_text_HmrRmU",
+    "rich_text_bnMKHY",
+    "image_with_text_FRYCRd",
+    "rich_text_yHRypG",
+    "rich_text_UxQemR",
+    "image_with_text_aU79Fn",
+    "rich_text_3atV9g",
+    "usp_section_GBj63z",
+    "shop_by_craft_z8aVmL"
   ]
 }

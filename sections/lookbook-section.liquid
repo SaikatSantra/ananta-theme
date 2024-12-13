@@ -1,5 +1,4 @@
 <style>
-
   .look-book__title-index, .look-book__title, .look-book__product-title {
     font-family: 'Crimson Text';
     font-weight: 400;
@@ -52,22 +51,13 @@
     line-height: 0.9;
     color: #622B1E;
   }
-  .look-book__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+
   .lb-image-collection__container .lb-collection__image {
     width: 100%;
     object-fit: contain;
   }
-  .look-book__products .look-book__product {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-  }
+
   .look-book__product .look-book__product-link {
-    display: flex;
     text-decoration: none;
   }
   .look-book__product-link .look-book__product-image {
@@ -88,6 +78,19 @@
     flex-direction: row-reverse;
   }
   @media screen and (min-width: 750px) {
+    .look-book__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .look-book__products .look-book__product {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .look-book__product .look-book__product-link {
+      display: flex;
+    }
     .look-book__products .look-book__product {
       gap: 10rem;
       padding-bottom: 2.4rem;

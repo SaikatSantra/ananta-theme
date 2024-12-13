@@ -73,9 +73,7 @@
 </style>
 
 {%- style -%}
-  .header {
-    padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
-  }
+ 
 
   .section-header {
     position: sticky; /* This is for fixing a Safari z-index issue. PR #2147 */
@@ -225,9 +223,10 @@
         {%- endif -%}
       </div>
       {% render 'header-search', input_id: 'Search-In-Modal' %}
-      <a href="{{  }}" class="header__icon header__icon--wishlist">
+      <a href="/app/iwish" class="header__icon header__icon--wishlist small-hide">
         {% render 'heart-icon' %}
       </a>  
+
       {%- if shop.customer_accounts_enabled -%}
         <a
           href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
