@@ -1,6 +1,24 @@
 <style>
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  .look-book__header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0 0 16px;
+  }
   .look-book__title-index, .look-book__title, .look-book__product-title {
-    font-family: 'Crimson Text';
+    font-family: var(--font-heading-family);
     font-weight: 400;
   }
   .look-book__title-index {
@@ -9,34 +27,34 @@
     color: #C3C0AD;
   }
   .look-book__title {
-    font-size: 10rem;
+    font-size: 4rem;
     line-height: 1;
-    color: #622B1E;
     margin: 0;
   }
   .look-book__product-title {
-    font-size: 3.2rem;
+    font-size: 2.6rem;
     line-height: 1.2;
     color: #31302B;
     text-align: center;
   }
   .look-book__product-info__info {
     text-align: center;
-    padding-inline: 1.5rem;
   }
   .look-book__product-price, .look-book__add-to-cart {
     font-family: 'Hanken Grotesk';
   }
   .look-book__product-price {
-    font-size: 2.8rem;
+    font-size: 2rem;
     font-weight: 600;
     line-height: 1.4;
+    color: #31302B;
+    margin-top: 0;
   }
   .look-book__product-info__info .product-form__buttons .product-form__submit {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 800;
     line-height: 0.9;
-    color: #622B1E;
+    text-transform: uppercase;
   }
   .look-book__product-info__info .product-form__buttons .product-form__submit.button {
     background: none;
@@ -45,143 +63,220 @@
   .look-book__product-info__info .product-form__buttons .product-form__submit.button::after {
     content: none;
   }
-  .look-book__add-to-cart {
-    font-size: 2.2rem;
-    font-weight: 800;
-    line-height: 0.9;
-    color: #622B1E;
+  .look-book__product-info__info .product-form__buttons .product-form__submit svg {
+    display: none;
   }
-
   .lb-image-collection__container .lb-collection__image {
+    height: auto;
     width: 100%;
     object-fit: contain;
+    vertical-align: top;
   }
-
+  .look-book__product-title-wrapper {
+    text-decoration: none;
+  }
+  .look-book__products .look-book__product {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
   .look-book__product .look-book__product-link {
+    display: block;
     text-decoration: none;
   }
   .look-book__product-link .look-book__product-image {
     width: 100%;
     object-fit: cover;
+    object-position: top;
+    height: auto;
+    vertical-align: top;
   }
   .look-book__product-info__image .look-book__product-image--hover {
     width: 100%;
+    height: auto;
     object-fit: cover;
+    vertical-align: top;
   }
   .look-book__product-info__info .look-book__product-title {
     margin-top: 0;
   }
   .look-book__product-info {
     display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
-  .row-reverse {
-    flex-direction: row-reverse;
-  }
-  @media screen and (min-width: 750px) {
+ 
+  @media screen and (min-width: 990px) {
     .look-book__header {
-      display: flex;
-      justify-content: space-between;
       align-items: center;
+      flex-direction: row;
+      margin-bottom: 40px;
+    }
+    .look-book__title {
+      font-size: 6rem;
+    }
+    .lb-image-collection__container {
+      width: calc(58% - 16px /2);
     }
     .look-book__products .look-book__product {
-      display: flex;
       align-items: center;
-      gap: 2rem;
+      flex-direction: row;
+      gap: 50px;
+    }
+    .look-book__products .look-book__product.row-reverse {
+      flex-direction: row-reverse;
     }
     .look-book__product .look-book__product-link {
-      display: flex;
+      width: calc(44% - 50px / 2);
     }
-    .look-book__products .look-book__product {
-      gap: 10rem;
-      padding-bottom: 2.4rem;
+    .look-book__product-link .look-book__product-image {      
+      max-height: 600px;
+    }
+    .look-book__product-info {
+      align-items: flex-start;
+      flex-direction: row;
+      width: calc(56% - 50px / 2);
+      gap: 40px;
+    }
+    .look-book__product-info.row-reverse {
+      flex-direction: row-reverse;
+    }
+    .look-book__product-info__image {
+      flex: 0 1 50%;
+    }
+    .look-book__product-info__image .look-book__product-image--hover {
+      max-height: 400px;
+      object-position: center;
+    }
+    .look-book__product-info__info {
+      flex: 0 1 50%;
     }
     .lb-collection__container {
-      padding-bottom: 7.6rem
+      padding-bottom: 3rem
+    }
+    .look-book__product-price {
+      margin: 0 0 40px;
     }
   }
 </style>
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
-<div class="look-book__container page-width">
-  {% if section.blocks.size > 0 %}
-    {% for block in section.blocks %}
-      {% if block.type == "collection" %}
-        {% assign collection = collections[block.settings.select_collection] %}
-        {% if collection %}
-          <div class="lb-collection__container">
-            <div class="look-book__header">
-              <div class="lb-title__container">
-                <div class="look-book__title-index">
-                  {% if forloop.index < 10 %}
-                  0{{ forloop.index }}
-                  {% else %}
-                    {{ forloop.index }}
-                  {% endif %}
-                </div>
-                <h2 class="look-book__title">
-                  {{ block.settings.collection_title | default: collection.title }}
-                </h2>
-              </div>
-              {% if collection.featured_image %}
-                <div class="lb-image-collection__container">
-                {{
-                  collection.featured_image
-                  | image_url: width: 1006
-                  | image_tag: class: 'lb-collection__image'
-                }}
-              </div>
-              {% endif %}
-            </div>
 
-            <div class="look-book__products">
-              {% for product in collection.products limit: 2 %}
-                <div class="look-book__product{% if forloop.index == 2 %} row-reverse{% endif %}">
-                  <a href="{{ product.url }}" class="look-book__product-link">
-                    {{
-                      product.featured_image
-                      | image_url: width:730
-                      | image_tag:
-                        class: "look-book__product-image",
-                        alt: product.title
-                    }}
-                  </a>
-                  <div class="look-book__product-info{% if forloop.index == 2 %} row-reverse{% endif %}">
-                    <div class="look-book__product-info__image">
-                      {% if product.images.size > 1 %}
-                        {{
-                          product.images[1]
-                          | image_url: width:450
-                          | image_tag:
-                            class: "look-book__product-image--hover",
-                            alt: product.title
-                        }}
-                      {% endif %}
-                    </div>
-                    <div class="look-book__product-info__info">
-                      <h3 class="look-book__product-title">{{ product.title }}</h3>
-                      <p class="look-book__product-price">{{ product.price | money }}</p>
-                      {%
-                        assign product_form_id = 'product-form-' | append: product.id
-                      %}
-                      {%- render 'buy-buttons', product: product, product_form_id: product_form_id, section_id: section.id -%}
+<div class="section-{{ section.id }}-padding">
+  <div class="look-book__container page-width">
+    {% if section.blocks.size > 0 %}
+      {% for block in section.blocks %}
+        {% if block.type == "collection" %}
+          {% assign collection = collections[block.settings.select_collection] %}
+          {% if collection %}
+            <div class="lb-collection__container color-{{ section.settings.color_scheme }}">
+              <div class="look-book__header">
+                <div class="lb-title__container">
+                  <div class="look-book__title-index">
+                    {% if forloop.index < 10 %}
+                    0{{ forloop.index }}
+                    {% else %}
+                      {{ forloop.index }}
+                    {% endif %}
+                  </div>
+                  <h2 class="look-book__title">
+                    {{ block.settings.collection_title | default: collection.title }}
+                  </h2>
+                </div>
+                {% if collection.featured_image %}
+                  <div class="lb-image-collection__container">
+                  {{
+                    collection.featured_image
+                    | image_url: width: 1006
+                    | image_tag: class: 'lb-collection__image'
+                  }}
+                </div>
+                {% endif %}
+              </div>
+
+              <div class="look-book__products color-{{ section.settings.color_scheme }}">
+                {% for product in collection.products limit: 2 %}
+                  <div class="look-book__product{% if forloop.index == 2 %} row-reverse{% endif %}">
+                    <a href="{{ product.url }}" class="look-book__product-link">
+                      {{
+                        product.featured_image
+                        | image_url: width:730
+                        | image_tag:
+                          class: "look-book__product-image",
+                          alt: product.title
+                      }}
+                    </a>
+                    <div class="look-book__product-info{% if forloop.index == 2 %} row-reverse{% endif %}">
+                      <div class="look-book__product-info__image">
+                        {% if product.images.size > 1 %}
+                          {{
+                            product.images[1]
+                            | image_url: width:450
+                            | image_tag:
+                              class: "look-book__product-image--hover",
+                              alt: product.title
+                          }}
+                        {% endif %}
+                      </div>
+                      <div class="look-book__product-info__info">
+                        <a href="{{ product.url }}" class="look-book__product-title-wrapper">
+                          <h3 class="look-book__product-title">{{ product.title }}</h3>
+                        </a>
+                        <p class="look-book__product-price">{{ product.price | money | remove: 'Rs.' | prepend: '₹'}}</p>
+                        {%
+                          assign product_form_id = 'product-form-' | append: product.id
+                        %}
+                        {%- render 'buy-buttons', product: product, product_form_id: product_form_id, section_id: section.id -%}
+                      </div>
                     </div>
                   </div>
-                </div>
-              {% endfor %}
+                {% endfor %}
+              </div>
             </div>
-          </div>
+          {% endif %}
         {% endif %}
-      {% endif %}
-    {% endfor %}
-  {% else %}
-    <p>No collections have been added yet.</p>
-  {% endif %}
+      {% endfor %}
+    {% else %}
+      <p>No collections have been added yet.</p>
+    {% endif %}
+  </div>
 </div>
-
 {% schema %}
   {
   "name": "Look Book",
   "class": "look-book",
-  "settings": [],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Product Color Scheme"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
   "blocks": [
     {
       "name": "Collection",

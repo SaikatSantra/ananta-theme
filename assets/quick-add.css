@@ -354,10 +354,19 @@ quick-add-modal .product-form__buttons {
   max-width: initial;
 }
 
-.quick-add__submit {
+.button.quick-add__submit {
+  font-size: 1.2rem;
+  font-weight: 800;
   padding: 0.8rem;
-  min-width: 100%;
   box-sizing: border-box;
+  column-gap: 8px;
+  min-height: 40px;
+  min-width: 160px;
+  text-transform: uppercase;
+}
+.quick-add__submit:hover {
+  background-color: rgb(var(--color-button-text));
+  color: #fff;
 }
 
 quick-add-modal .product-media-container.constrain-height {

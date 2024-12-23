@@ -3,5 +3,10 @@
 }
 
 .related-products__heading {
-  margin: 0 0 3rem;
+  margin: 0 0 3rem;  
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-top: 0;
+  text-align: center;
 }

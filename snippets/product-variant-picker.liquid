@@ -19,6 +19,8 @@
         assign swatch_count = option.values | map: 'swatch' | compact | size
         assign picker_type = block.settings.picker_type
 
+        assign is_first_option = forloop.first
+        assign size_option_downcase = option.name | downcase
         if swatch_count > 0 and block.settings.swatch_shape != 'none'
           if block.settings.picker_type == 'dropdown'
             assign picker_type = 'swatch_dropdown'
@@ -33,7 +35,7 @@
             {{ option.name }}:
             <span data-selected-value>
               {{- option.selected_value -}}
-            </span>
+            </span>            
           </legend>
           {% render 'product-variant-options',
             product: product,
@@ -44,7 +46,38 @@
         </fieldset>
       {%- elsif picker_type == 'button' -%}
         <fieldset class="js product-form__input product-form__input--pill">
-          <legend class="form__label">{{ option.name }}</legend>
+          {% if is_first_option and size_option_downcase contains 'size' %}
+          <div class="form__label--size">
+          {% endif %}  
+            <legend class="form__label">{{ option.name }}</legend>
+            {% if is_first_option and size_option_downcase contains 'size' %}
+              <modal-opener
+                class="product-popup-modal__opener quick-add-hidden"
+                data-modal="#PopupModal-size-chart"
+                {{ block.shopify_attributes }}
+              >
+                <button
+                  id="ProductPopup-size-chart"
+                  class="product-popup-modal__button size-chart-link"
+                  type="button"
+                  aria-haspopup="dialog"
+                >
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.70817 16.9659C2.45823 15.716 1.83325 15.091 1.83325 14.3143C1.83325 13.5377 2.45823 12.9127 3.70817 11.6628L11.6628 3.70817C12.9127 2.45823 13.5377 1.83325 14.3143 1.83325C15.091 1.83325 15.716 2.45823 16.9659 3.70817L18.2916 5.03395C19.5416 6.2839 20.1666 6.90887 20.1666 7.68549C20.1666 8.46211 19.5416 9.08708 18.2916 10.3371L10.3371 18.2916C9.08708 19.5416 8.46211 20.1666 7.68549 20.1666C6.90887 20.1666 6.2839 19.5416 5.03395 18.2916L3.70817 16.9659Z" stroke="#622B1E" stroke-width="1.5"/>
+                    <path d="M7.75903 7.75903L9.05539 9.05539" stroke="#622B1E" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M11.6482 3.86987L12.9445 5.16624" stroke="#622B1E" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M3.86987 11.6482L5.16623 12.9445" stroke="#622B1E" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M5.8147 9.70361L7.75924 11.6481" stroke="#622B1E" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M9.70386 5.81445L11.6485 7.759" stroke="#622B1E" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                    
+                  {{ section.settings.size_chart_text | default: section.settings.size_chart_page.title | escape }}
+                </button>
+              </modal-opener>
+            {% endif %}
+          {% if is_first_option and size_option_downcase contains 'size' %}
+          </div>          
+          {% endif %}
           {% render 'product-variant-options',
             product: product,
             option: option,
@@ -54,8 +87,33 @@
         </fieldset>
       {%- else -%}
         <div class="product-form__input product-form__input--dropdown">
-          <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
+          <label class="form__label form__label--size" for="Option-{{ section.id }}-{{ forloop.index0 }}">
             {{ option.name }}
+            {% if is_first_option and size_option_downcase contains 'size' %}
+              <modal-opener
+                class="product-popup-modal__opener quick-add-hidden"
+                data-modal="#PopupModal-size-chart"
+                {{ block.shopify_attributes }}
+              >
+                <button
+                  id="ProductPopup-size-chart"
+                  class="product-popup-modal__button size-chart-link"
+                  type="button"
+                  aria-haspopup="dialog"
+                >
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.70817 16.9659C2.45823 15.716 1.83325 15.091 1.83325 14.3143C1.83325 13.5377 2.45823 12.9127 3.70817 11.6628L11.6628 3.70817C12.9127 2.45823 13.5377 1.83325 14.3143 1.83325C15.091 1.83325 15.716 2.45823 16.9659 3.70817L18.2916 5.03395C19.5416 6.2839 20.1666 6.90887 20.1666 7.68549C20.1666 8.46211 19.5416 9.08708 18.2916 10.3371L10.3371 18.2916C9.08708 19.5416 8.46211 20.1666 7.68549 20.1666C6.90887 20.1666 6.2839 19.5416 5.03395 18.2916L3.70817 16.9659Z" stroke="#622B1E" stroke-width="1.5"/>
+                    <path d="M7.75903 7.75903L9.05539 9.05539" stroke="#622B1E" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M11.6482 3.86987L12.9445 5.16624" stroke="#622B1E" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M3.86987 11.6482L5.16623 12.9445" stroke="#622B1E" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M5.8147 9.70361L7.75924 11.6481" stroke="#622B1E" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M9.70386 5.81445L11.6485 7.759" stroke="#622B1E" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                    
+                  {{ section.settings.size_chart_text | default: section.settings.size_chart_page.title | escape }}
+                </button>
+              </modal-opener>
+            {% endif %}
           </label>
           <div class="select">
             {%- if picker_type == 'swatch_dropdown' -%}

@@ -10,7 +10,6 @@
   Usage:
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true %}
 {% endcomment %}
-<div {{ block.shopify_attributes }}>
   {%- if product != blank -%}
     {%- liquid
       assign gift_card_recipient_feature_active = false
@@ -74,7 +73,7 @@
             id="ProductSubmitButton-{{ section_id }}"
             type="submit"
             name="add"
-            class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+            class="product-form__submit button button--full-width {% comment %}{% if show_dynamic_checkout %}button--secondary{% else %}{% endcomment %}button--primary{% comment %}{% endif %}{% endcomment %}"
             {% if product.selected_or_first_available_variant.available == false
               or quantity_rule_soldout
               or product.selected_or_first_available_variant == null
@@ -89,6 +88,7 @@
                 {{ 'products.product.sold_out' | t }}
               {%- else -%}
                 {{ 'products.product.add_to_cart' | t }}
+                &nbsp;{{ 'up-right-br.svg' | inline_asset_content }}
               {%- endif -%}
             </span>
             {%- render 'loading-spinner' -%}
@@ -113,7 +113,7 @@
       </div>
     </div>
   {%- endif -%}
-  
+
   {%- if show_pickup_availability -%}
     {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
 
@@ -148,4 +148,13 @@
 
     <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
-</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    let buynowButton = document.querySelector('.shopify-payment-button__button.shopify-payment-button__button--unbranded');
+    buynowButton.classList.add("button--secondary");
+    let bnBtnInnertext = buynowButton.innerText;
+    const arrowSvg = `&nbsp;{{ 'up-right-br.svg' | inline_asset_content }}`;
+    buynowButton.insertAdjacentHTML('beforeend', arrowSvg);
+  });
+</script>

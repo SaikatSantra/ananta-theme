@@ -27,8 +27,8 @@
     </div>
   </div>
   <!-- Add Navigation -->
-  <div class="swiper-next">{{ 'sbc-next.svg' | inline_asset_content}}</div>
-  <div class="swiper-prev">{{ 'sbc-prev.svg' | inline_asset_content}}</div>
+  <div class="swiper-next swiper-next{{ section.id | remove: '-'}}">{{ 'sbc-next.svg' | inline_asset_content}}</div>
+  <div class="swiper-prev swiper-prev{{ section.id | remove: '-'}}">{{ 'sbc-prev.svg' | inline_asset_content}}</div>
 </div>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -36,8 +36,8 @@
       slidesPerView: 2,
       spaceBetween: 32,
       navigation: {
-        nextEl: '.swiper-next',
-        prevEl: '.swiper-prev',
+        nextEl: '.swiper-next{{ section.id | remove: '-'}}',
+        prevEl: '.swiper-prev{{ section.id | remove: '-'}}',
       },
       breakpoints: {
         100: {

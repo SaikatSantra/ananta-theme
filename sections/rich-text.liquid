@@ -18,15 +18,7 @@
   .rich-text__heading-container .rich-text__heading {
     margin: 0;
   }
-  #shopify-section-{{ section.id }} .rich-text__heading {
-    font-family: 'Crimson Text';
-  }
-  #shopify-section-{{ section.id }} .rich-text__text {
-    font-family: 'Hanken Grotesk';
-    font-size: 2rem;
-    line-height: 1.6;
-    font-weight: normal;
-  }
+  
   {% if section.settings.top_bottom_border %}
     {% liquid
       assign border_color = section.settings.border_color

@@ -1,0 +1,35 @@
+
+    {%- if extralink.links == blank -%}
+        <a id="HeaderDrawer-{{ link.handle }}-{{ grandchildlink.handle }}" href="{{ grandchildlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset {% if grandchildlink.current %} menu-drawer__menu-item--active {% endif %}" {% if grandchildlink.current %} aria-current="page" {% endif %}>
+             {{ grandchildlink.title | escape }}
+        </a>
+    {%- else -%}
+        <details id="Details-menu-drawer-{{ link.handle }}-{{ grandchildlink.handle }}" data-line="63">
+            <summary id="HeaderDrawer-{{ link.handle }}-{{ grandchildlink.handle }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
+            {{ grandchildlink.title | escape }}
+            <span class="svg-wrapper"> {{- 'icon-arrow.svg' | inline_asset_content -}}</span>
+            <span class="svg-wrapper small-hide"> {{- 'icon-caret.svg' | inline_asset_content -}} </span>
+            </summary>
+            <div id="childlink-{{ grandchildlink.handle | escape }}" class="menu-drawer__submenu has-submenu gradient motion-reduce">
+            <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+                <span class="svg-wrapper"> {{- 'icon-arrow.svg' | inline_asset_content -}} </span>
+                {{ grandchildlink.title | escape }}
+            </button>
+            <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                {%- for greargrandchildlink in grandchildlink.links -%}
+                    {% assign menuname = grandchildlink.handle | strip %}
+                {%- for extralink in linklists[menuname].links -%}
+                <li>
+                    {%- render 'drawer-extra-menu-item', grandchildlink : greargrandchildlink -%}
+                    {% comment %} <a id="HeaderDrawer-{{ link.handle }}-{{ grandchildlink.handle }}-{{ greatgrandchildlink.handle }}" href="{{ greatgrandchildlink.url }}"
+                    class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if greatgrandchildlink.current %} menu-drawer__menu-item--active{% endif %}"
+                    {% if greatgrandchildlink.current %} aria-current="page" {% endif %}>
+                    {{ greatgrandchildlink.title | escape }}
+                    </a> {% endcomment %}
+                </li>
+                {%- endfor -%}
+            {%- endfor -%}
+            </ul>
+            </div>
+        </details>
+    {%- endif -%}

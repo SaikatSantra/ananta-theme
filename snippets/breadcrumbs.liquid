@@ -3,14 +3,14 @@
   font-family: 'Hanken Grotesk';
   font-size: 0.875em;
   line-height: 1.1;
-  padding-block: 1.875em 1.25em;
-  border-bottom: 1px solid #D6D3C0;
+  padding-block: 1.875em 0;
 }
 
 .breadcrumbs ol {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 1.25em;
+  border-bottom: 1px solid #D6D3C0;
 }
 
 .breadcrumbs li {
@@ -66,15 +66,10 @@
 
   {% when 'product' %}
 
-    {% if collection.url %}
-      <li>
-        {{ collection.title | link_to: collection.url }}
-      </li>
+    {% if product.collections.first.url %}
+      <li> {{ product.collections.first.title | link_to: product.collections.first.url }} </li>
     {% endif %}
-
-    <li>
-      <a href="{{ product.url }}" aria-current="page">{{ product.title }}</a>
-    </li>
+    <li><a href="{{ product.url }}" aria-current="page">{{ product.title }}</a></li>
 
   {% when 'collection' and collection.handle %}
 

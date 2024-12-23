@@ -78,25 +78,27 @@
           <span class="price-item price-item--regular"> {{- 'products.product.volume_pricing.price_range' | t: minimum: money_price_min, maximum: money_price_max -}} </span>
         {%- else -%}
           <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
-          <span class="price-item price-item--regular dfgh"> {{ money_price }} </span>
+          <span class="price-item price-item--regular">  
+            {% comment %} <span class="price-mrp">MRP</span> {% endcomment %}
+            {{ money_price | remove: 'Rs.' | prepend: '₹'  }} </span>
         {%- endif -%}
       </div>
       <div class="price__sale">
-        {% comment %} {%- unless product.price_varies == false and product.compare_at_price_varies %}
+        {%- unless product.price_varies == false and product.compare_at_price_varies %}
           <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
-          <span class="price-mrp">MRP</span>
+          {% comment %} <span class="price-mrp">MRP</span> {% endcomment %}
           <span>
             <s class="price-item price-item--regular">
               {% if settings.currency_code_enabled %}
-                {{ compare_at_price | money_with_currency | remove: 'Rs.' }}
+                {{ compare_at_price | money_with_currency | remove: 'Rs.' | prepend: '₹' }}
               {% else %}
-                {{ compare_at_price | money | remove: 'Rs.' }}
+                {{ compare_at_price | money | remove: 'Rs.' | prepend: '₹' }}
               {% endif %}
             </s>
           </span>
-        {%- endunless -%} {% endcomment %}
+        {%- endunless -%}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
-        <span class="price-item price-item--sale price-item--last"> {{ money_price | remove: 'Rs.' }} </span>
+        <span class="price-item price-item--sale price-item--last"> {{ money_price | remove: 'Rs.' | prepend: '₹' }} </span>
       </div>
       <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
         <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
@@ -115,7 +117,10 @@
       <div class="tax-text">  </div>
     </div>
     {%- if show_badges -%}
-      <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}"> {{ 'products.product.on_sale' | t }}</span>
+      <div class="sale-badge-wrap">
+        <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}"> <div class="price__badge-sale-inner">{{ 'products.product.on_sale' | t }}</div> </span>
+      </div>
+      {% comment %} <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}"> <div class="price__badge-sale-inner">{{ 'products.product.on_sale' | t }}</div> </span> {% endcomment %}
       <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
     {%- endif -%}
   </div>

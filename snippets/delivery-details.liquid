@@ -1,19 +1,18 @@
 {% comment %}
-  Renders icon with text block
+  Renders delivery details
 
   Accepts:
   - block: {Object} passes in the block information.
 
 
   Usage:
-  {% render 'icon-with-text',
+  {% render 'delivery-details',
     block: block
   %}
 {% endcomment %}
 {%- liquid
   assign heading_1_empty = false
   assign heading_2_empty = false
-  assign heading_3_empty = false
   assign text_only_all_items = true
 
   if block.settings.heading_1 == empty
@@ -32,12 +31,13 @@
     assign text_only_all_items = false
   elsif heading_2_empty == false and block.settings.icon_2 != 'none' or block.settings.image_2 != null
     assign text_only_all_items = false
-  elsif heading_3_empty == false and block.settings.icon_3 != 'none' or block.settings.image_3 != null
-    assign text_only_all_items = false
   endif
 -%}
+{% if block.settings.heading %}
+<h3 class="delivery-details-heading">{{ block.settings.heading }}</h3>
+{% endif %}
 <ul
-  class="icon-with-text icon-with-text--{{ block.settings.layout }} list-unstyled{% if text_only_all_items %} icon-with-text--text-only{% endif %}"
+  class="delivery-details icon-with-text list-unstyled{% if text_only_all_items %} icon-with-text--text-only{% endif %}"
   {{ block.shopify_attributes }}
 >
   {%- unless heading_1_empty -%}
@@ -57,14 +57,55 @@
           loading="lazy"
         >
       {%- endif -%}
-      <span class="inline-richtext">
-        {{- block.settings.heading_1 -}}
+      {% liquid
+        assign today = 'now' | date: "%s"
+        assign meta_days = product.metafields.custom.expected_delivery.value | times: 86400
+
+        comment
+          If meta_days is 0, set it to 15 days ahead (15 * 86400 seconds)
+        endcomment
+        assign fifteen_days = 15 | times: 86400
+        if meta_days == 0
+          assign meta_days = fifteen_days
+        endif
+
+        assign expected_date_in_sec = today | plus: meta_days
+
+        comment
+        assign day_of_week = expected_date_in_sec | date: "%A"
+        assign weekday_offset = 0
+        endcomment
+
+        comment
+          Check if the delivery day is Saturday or Sunday
+        
+        if day_of_week == "Saturday"
+          assign weekday_offset = 2 | times: 86400
+        elsif day_of_week == "Sunday"
+          assign weekday_offset = 1 | times: 86400
+        endif
+        assign adjusted_date_in_sec = expected_date_in_sec | plus: weekday_offset
+        endcomment
+      
+        assign adjusted_date_in_sec = expected_date_in_sec
+        assign expected_date = adjusted_date_in_sec | date: "%A, %B %d"
+      %}
+      {% if block.settings.sub_heading_1 %}
+      <div class="delivery-wrapper">
+      {% endif %}
+      <span class="h4 inline-richtext">
+        {{- block.settings.heading_1 | append: ' ' | append: expected_date -}}
       </span>
+      {% if block.settings.sub_heading_1 %}
+        <p class="inline-richtext sub-text">
+          {{- block.settings.sub_heading_1 -}}
+        </p>
+      {% endif %}
+      {% if block.settings.sub_heading_1 %}
+      </div>
+      {% endif %}
     </li>
   {%- endunless -%}
-  {% if block.settings.layout == 'horizontal' %}
-    <span class="divider"></span>
-  {% endif %}
   {%- unless heading_2_empty -%}
     <li class="icon-with-text__item">
       {%- if block.settings.image_2 == null -%}
@@ -82,33 +123,8 @@
           loading="lazy"
         >
       {%- endif -%}
-      <span class="inline-richtext">
+      <span class="h4 inline-richtext">
         {{- block.settings.heading_2 -}}
-      </span>
-    </li>
-  {%- endunless -%}
-  {% if block.settings.layout == 'horizontal' %}
-    <span class="divider"></span>
-  {% endif %}
-  {%- unless heading_3_empty -%}
-    <li class="icon-with-text__item">
-      {%- if block.settings.image_3 == null -%}
-        {% render 'icon-accordion', icon: block.settings.icon_3 -%}
-      {%- else -%}
-        <img
-          src="{{ block.settings.image_3 | image_url }}"
-          {% if block.settings.image_3.alt != blank %}
-            alt="{{ block.settings.image_3.alt | escape }}"
-          {% else %}
-            role="presentation"
-          {% endif %}
-          height="auto"
-          width="auto"
-          loading="lazy"
-        >
-      {%- endif -%}
-      <span class="inline-richtext">
-        {{- block.settings.heading_3 -}}
       </span>
     </li>
   {%- endunless -%}

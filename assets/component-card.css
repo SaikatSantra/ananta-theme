@@ -593,3 +593,10 @@
     clip-path: polygon(var(--shape--blob-5));
   }
 }
+
+.product-card-wrapper .card__heading {
+  letter-spacing: 0;
+}
+.product-card-wrapper:hover .card__heading .full-unstyled-link {
+  color: var(--color-primary);
+}

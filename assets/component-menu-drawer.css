@@ -199,6 +199,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   font-size: 1.4rem;
   color: rgb(var(--color-foreground));
   margin-bottom: 0;
+  gap: 5px;
 }
 
 .menu-drawer__utility-links:has(.menu-drawer__localization) .menu-drawer__account {
@@ -240,4 +241,37 @@ details[open].menu-opening > .menu-drawer__submenu {
     filter: none !important;
     transition: none !important;
   }
+}
+
+.menu-drawer__utility-links {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.menu-drawer__utility-links  .list-social__item .svg-wrapper {
+  height: 40px;
+  width: 40px;
+}
+.menu-drawer__utility-links account-icon {
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+}
+.menu-drawer__utility-links account-icon .svg-wrapper {margin: 0;}
+.menu-drawer__wishlist {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  color: rgb(var(--color-foreground));
+  margin-bottom: 0;
+  gap: 5px;
+}
+.menu-drawer__wishlist svg {
+  height: 40px;
+  width: 40px;
 }

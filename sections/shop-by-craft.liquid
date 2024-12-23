@@ -1,5 +1,22 @@
-<div class="shop-by-craft page-width">
-  <div class="shop-by-craft__container">
+{%- style -%}
+  :root {
+    --grid-desktop-horizontal-spacing: 20px;
+  }
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="shop-by-craft section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
+  <div class="shop-by-craft__container page-width">
     <!-- Heading -->
     {% if section.settings.heading %}
       <h2 class="shop-by-craft__heading heading-underline">{{ section.settings.heading }}</h2>
@@ -70,7 +87,7 @@
         >
           {% if section.settings.button_text %}
             {{ section.settings.button_text }}
-            &nbsp;{{ 'up-right-w.svg' | inline_asset_content }}
+            &nbsp;{{ 'up-right-br.svg' | inline_asset_content }}
           {% endif %}
         </a>
       </div>
@@ -98,6 +115,36 @@
       "type": "url",
       "id": "button_link",
       "label": "Button Link"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
     }
   ],
   "blocks": [

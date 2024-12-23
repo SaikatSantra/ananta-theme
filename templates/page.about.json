@@ -9,7 +9,7 @@
             "image": "shopify:\/\/shop_images\/banner_2.png",
             "mobile_image": "shopify:\/\/shop_images\/banner_2.png",
             "heading": "{{ page.title }}",
-            "heading_size": "h2",
+            "heading_size": "hxxl",
             "subheading": "",
             "button_label": "",
             "link": "",
@@ -52,7 +52,7 @@
           "type": "heading",
           "settings": {
             "heading": "Who we are",
-            "heading_size": "hxl"
+            "heading_size": "h0"
           }
         },
         "text_y3mP7B": {
@@ -87,12 +87,21 @@
         "text_RHfkcE": {
           "type": "text",
           "settings": {
-            "text": "<h2>At aoho! we go beyond being just a brand; we're a movement that is redefining the way women experience ethnic wear.<\/h2>"
+            "text": ""
+          }
+        },
+        "caption_TfFQ8c": {
+          "type": "caption",
+          "settings": {
+            "caption": "At aoho! we go beyond being just a brand; we're a movement that is redefining the way women experience ethnic wear.",
+            "text_style": "subtitle",
+            "text_size": "large"
           }
         }
       },
       "block_order": [
-        "text_RHfkcE"
+        "text_RHfkcE",
+        "caption_TfFQ8c"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -109,6 +118,43 @@
         "margin_bottom": 44
       }
     },
+    "multicolumn_YtDpL3": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_EABkxx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_41.jpg",
+            "title": "Handcrafted by master artisans",
+            "heading_size": "h0",
+            "text": "<p>We take pride in the fact that our collection is handcrafted, featuring exquisite handblock prints, ikkat, bengal cotton and mangalagiri fabrics. As a brand, we use natural colors extracted from fruits and vegetables in our dyeing process. Our fabrics are crafted through a meticulous, labor-intensive process where every step from sourcing to packaging is done by hand. This results in unique and one-of-a-kind pieces that reflect the artistry and craftsmanship of India's rich cultural heritage.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_EABkxx"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 1,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "full_width": false,
+        "narrow_width": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_FRYCRd": {
       "type": "image-with-text",
       "blocks": {
@@ -116,7 +162,7 @@
           "type": "heading",
           "settings": {
             "heading": "Handcrafted by master artisans",
-            "heading_size": "hxl"
+            "heading_size": "h0"
           }
         },
         "text_TmrpRQ": {
@@ -130,10 +176,11 @@
         "heading_p73pUz",
         "text_TmrpRQ"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/image_41.jpg",
         "height": "adapt",
-        "page_width_narrow": true,
+        "page_width_narrow": false,
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "top",
@@ -221,40 +268,39 @@
         "margin_bottom": 52
       }
     },
-    "image_with_text_aU79Fn": {
-      "type": "image-with-text",
+    "multicolumn_DafeEM": {
+      "type": "multicolumn",
       "blocks": {
-        "heading_CnUwWV": {
-          "type": "heading",
+        "column_pdLtiF": {
+          "type": "column",
           "settings": {
-            "heading": "The Founder",
-            "heading_size": "h1"
-          }
-        },
-        "text_QbLrcq": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Anindita, the founder of Aoho, is an engineer-turned-fashion designer who pursued her childhood dream of starting a clothing line. Beginning with just one tailor in December 2019. Today, with a team of 10 members and over 60+ artisans, aoho’s handcrafted clothing has a wide reach, catering to customers both in India and internationally.<\/p>"
+            "image": "shopify:\/\/shop_images\/image_42.jpg",
+            "title": "The Founder",
+            "heading_size": "h1",
+            "text": "<p>Anindita, the founder of Aoho, is an engineer-turned-fashion designer who pursued her childhood dream of starting a clothing line. Beginning with just one tailor in December 2019. Today, with a team of 10 members and over 60+ artisans, aoho’s handcrafted clothing has a wide reach, catering to customers both in India and internationally.<\/p>",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "heading_CnUwWV",
-        "text_QbLrcq"
+        "column_pdLtiF"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/image_42.jpg",
-        "height": "adapt",
-        "page_width_narrow": true,
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 1,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
         "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
+        "full_width": false,
+        "narrow_width": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -403,7 +449,10 @@
       "settings": {
         "heading": "Shop by Craft",
         "button_text": "VIEW ALL PRODUCTS",
-        "button_link": "shopify:\/\/collections\/all"
+        "button_link": "shopify:\/\/collections\/all",
+        "color_scheme": "scheme-fe07af95-f88a-42cb-bde2-54c68bd819d0",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -412,10 +461,11 @@
     "main",
     "rich_text_HmrRmU",
     "rich_text_bnMKHY",
+    "multicolumn_YtDpL3",
     "image_with_text_FRYCRd",
     "rich_text_yHRypG",
     "rich_text_UxQemR",
-    "image_with_text_aU79Fn",
+    "multicolumn_DafeEM",
     "rich_text_3atV9g",
     "usp_section_GBj63z",
     "shop_by_craft_z8aVmL"
