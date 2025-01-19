@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner": {
@@ -14,7 +23,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
+            "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -79,7 +88,7 @@
             "heading_size": "h0",
             "subheading": "Master artisans from Gujarat",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/all",
+            "link": "shopify://collections/all",
             "button_style_secondary": false,
             "box_align": "middle-left",
             "show_text_box": true,
@@ -96,7 +105,7 @@
             "heading_size": "h0",
             "subheading": "Master artisans from Gujarat",
             "button_label": "SHOP NOW",
-            "link": "shopify:\/\/collections\/all",
+            "link": "shopify://collections/all",
             "button_style_secondary": false,
             "box_align": "middle-left",
             "show_text_box": true,
@@ -129,56 +138,56 @@
           "type": "category",
           "settings": {
             "category_name": "Ajrakh Kurtas",
-            "add_url": "shopify:\/\/collections"
+            "add_url": "shopify://collections"
           }
         },
         "category_iEq8D6": {
           "type": "category",
           "settings": {
             "category_name": "Ajrakh Kurtas",
-            "add_url": "shopify:\/\/collections"
+            "add_url": "shopify://collections"
           }
         },
         "category_Uh6Hct": {
           "type": "category",
           "settings": {
             "category_name": "Ajrakh Kurtas",
-            "add_url": "shopify:\/\/collections"
+            "add_url": "shopify://collections"
           }
         },
         "category_cPqCHM": {
           "type": "category",
           "settings": {
             "category_name": "Ajrakh Kurtas",
-            "add_url": "shopify:\/\/collections"
+            "add_url": "shopify://collections"
           }
         },
         "category_wawyQd": {
           "type": "category",
           "settings": {
             "category_name": "Ajrakh Kurtas",
-            "add_url": "shopify:\/\/collections"
+            "add_url": "shopify://collections"
           }
         },
         "category_zm39XD": {
           "type": "category",
           "settings": {
             "category_name": "Ajrakh Kurtas",
-            "add_url": "shopify:\/\/collections"
+            "add_url": "shopify://collections"
           }
         },
         "category_fXyP4C": {
           "type": "category",
           "settings": {
             "category_name": "Ajrakh Kurtas",
-            "add_url": "shopify:\/\/collections"
+            "add_url": "shopify://collections"
           }
         },
         "category_rCi4ea": {
           "type": "category",
           "settings": {
             "category_name": "Ajrakh Kurtas",
-            "add_url": "shopify:\/\/collections"
+            "add_url": "shopify://collections"
           }
         }
       },
@@ -252,36 +261,32 @@
         "craft_98a33B": {
           "type": "craft",
           "settings": {
-            "craft_title": "Ajrakh Kurtas",
             "description": "Master artisans from Gujarat",
-            "add_url": "shopify:\/\/collections\/frontpage",
+            "add_url": "shopify://collections/frontpage",
             "url_text": "SHOP NOW"
           }
         },
         "craft_PMhWeF": {
           "type": "craft",
           "settings": {
-            "craft_title": "Ajrakh Kurtas",
             "description": "Master artisans from Gujarat",
-            "add_url": "shopify:\/\/collections\/frontpage",
+            "add_url": "shopify://collections/frontpage",
             "url_text": "SHOP NOW"
           }
         },
         "craft_UaifEz": {
           "type": "craft",
           "settings": {
-            "craft_title": "Ajrakh Kurtas",
             "description": "Master artisans from Gujarat",
-            "add_url": "shopify:\/\/collections\/frontpage",
+            "add_url": "shopify://collections/frontpage",
             "url_text": "SHOP NOW"
           }
         },
         "craft_6QHLMP": {
           "type": "craft",
           "settings": {
-            "craft_title": "Ajrakh Kurtas",
             "description": "Master artisans from Gujarat",
-            "add_url": "shopify:\/\/collections\/frontpage",
+            "add_url": "shopify://collections/frontpage",
             "url_text": "SHOP NOW"
           }
         }
@@ -295,7 +300,7 @@
       "settings": {
         "heading": "Shop by Craft",
         "button_text": "VIEW ALL PRODUCTS",
-        "button_link": "shopify:\/\/collections"
+        "button_link": "shopify://collections"
       }
     },
     "image_banner_ELHDPX": {
@@ -329,7 +334,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "VIEW ALL PRODUCTS",
-            "button_link_1": "shopify:\/\/collections",
+            "button_link_1": "shopify://collections",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -363,11 +368,11 @@
         "heading": "",
         "heading_size": "h1",
         "enable_video_looping": false,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "description": "",
         "video1_overlay_title": "Rang",
         "video1_overlay_subtitle": "Summer edition 2024",
-        "video_url_2": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_url_2": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "description_2": "",
         "video2_overlay_title": "Fiza",
         "video2_overlay_subtitle": "Festive 24",
